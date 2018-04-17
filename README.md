@@ -12,7 +12,22 @@ Curso Material Design con Android Studio - Jesús Conde
     3. [aplicando estilos a toda la app](https://youtu.be/MSL1HZaY0GU?t=435)
         1. [Se edita el archivo `values/styles.xml` que es el contiene `<style name="AppTheme"`](https://youtu.be/MSL1HZaY0GU?t=463)
     4. [https://www.materialpalette.com](https://www.materialpalette.com)
-
+2. [03.- Material Design con Android Studio. Entender los Layouts](https://www.youtube.com/watch?v=PLBPxB8DBRI)
+    1. [Activities = Pantallas,Apariencia=xml,Comportamiento=.java](https://youtu.be/PLBPxB8DBRI?t=27)
+    2. [Componente de pantalla - Widgets](https://youtu.be/PLBPxB8DBRI?t=57)
+        1. Botones, imagenes, deslizadores
+    3. [Componente de pantalla - Contenedores](https://youtu.be/PLBPxB8DBRI?t=71)
+        1. Los contenedores son los layouts o viewgroups
+        2. [Relative Layout](https://youtu.be/PLBPxB8DBRI?t=116)
+            1. Gestiona la rotacion en pantalla y ahorra memoria en diseños complejos
+        3. [Linear Layout](https://youtu.be/PLBPxB8DBRI?t=212)
+    2. []()
+    2. []()
+    2. []()
+    
 ## Notas
 - Para cambiar la version del sdk hay que tocar el archivo `app/build.gradle` propiedad `minSdkVersion`
   [ejemplo](https://github.com/eacevedof/prj_adr_matdesign2/commit/bb0ffb41697834e541047005d17b261c0d5e8a4f)
+- Corregido error:
+  `Error: This view is not constrained, it only has design time positions, so it will jump to (0,0) unless you add constraints`
+  Habia que darle a la varita mágica.
