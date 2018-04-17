@@ -11,6 +11,7 @@ Curso Material Design con Android Studio - Jesús Conde
         1. [editar archivo `values/colors.xml`](https://youtu.be/MSL1HZaY0GU?t=413)
     3. [aplicando estilos a toda la app](https://youtu.be/MSL1HZaY0GU?t=435)
         1. [Se edita el archivo `values/styles.xml` que es el contiene `<style name="AppTheme"`](https://youtu.be/MSL1HZaY0GU?t=463)
+    4. [https://www.materialpalette.com](https://www.materialpalette.com)
 
 ## Notas
 - Para cambiar la version del sdk hay que tocar el archivo `app/build.gradle` propiedad `minSdkVersion`
