@@ -21,6 +21,12 @@ Curso Material Design con Android Studio - Jesús Conde
         2. [Relative Layout](https://youtu.be/PLBPxB8DBRI?t=116)
             1. Gestiona la rotacion en pantalla y ahorra memoria en diseños complejos
         3. [Linear Layout](https://youtu.be/PLBPxB8DBRI?t=212)
+            1. Pensado para usar una única columna o única fila o lista
+            2. Cada linear layout tiene un atributo `android:orientation` que puede tomar Horizontal o Vertical
+            3. Se puede crear diseños complejos anidando linear layouts
+        4. [Ejemplo component tree](https://youtu.be/PLBPxB8DBRI?t=249)
+3. [04.- Curso Material Design con Android Studio. Crear Aplicación con Material Design.](https://www.youtube.com/watch?v=npph-aRU30U)
+    1. [RecyclerView remplaza a ListView](https://youtu.be/npph-aRU30U?t=74)
     2. []()
     2. []()
     2. []()
