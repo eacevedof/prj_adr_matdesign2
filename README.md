@@ -1,5 +1,6 @@
 # prj_adr_matdesign2
-Curso Material Design con Android Studio - Jesús Conde
+
+## Curso Material Design con Android Studio - Jesús Conde
 
 1. [02.- Curso Material Design con Android Studio. El Theme Material](https://youtu.be/MSL1HZaY0GU)
     1. [Definir estilo personalizado para text view](https://youtu.be/MSL1HZaY0GU?t=206)
@@ -31,9 +32,13 @@ Curso Material Design con Android Studio - Jesús Conde
     2. []()
     2. []()
     
-## Notas
+### Notas
 - Para cambiar la version del sdk hay que tocar el archivo `app/build.gradle` propiedad `minSdkVersion`
   [ejemplo](https://github.com/eacevedof/prj_adr_matdesign2/commit/bb0ffb41697834e541047005d17b261c0d5e8a4f)
 - Corregido error:
   `Error: This view is not constrained, it only has design time positions, so it will jump to (0,0) unless you add constraints`
   Habia que darle a la varita mágica.
+  
+## [Curso Android desde cero (nov - 2017)](https://www.youtube.com/watch?v=tyx05coXixw&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y) - [La Geekpedia De Ernesto](https://www.youtube.com/user/neto376/videos?flow=grid&view=0&sort=dd)
+
+1. [Curso Android desde cero #6 | Ciclo de vida de un Activity](https://youtu.be/poipVVd2jzU?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=2)
