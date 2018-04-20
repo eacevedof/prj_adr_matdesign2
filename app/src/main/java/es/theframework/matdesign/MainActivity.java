@@ -2,6 +2,7 @@ package es.theframework.matdesign;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(this, "OnStart", Toast.LENGTH_SHORT).show();
+        // La actividad está a punto de hacerse visible.
     }//onCreate
 
     //código descargado de: https://mega.nz/#!xQBxEAaZ!MOs69BrKRd9bcVOLA0nnf0Z_Slz4NgTosdlT_Yw_yfo
@@ -47,5 +50,5 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "OnDestroy", Toast.LENGTH_SHORT).show();
         // La actividad está a punto de ser destruida.
     }//onDestroy
-    
+
 }//MainActivity
