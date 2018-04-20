@@ -42,3 +42,15 @@
 ## [Curso Android desde cero (nov - 2017)](https://www.youtube.com/watch?v=tyx05coXixw&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y) - [La Geekpedia De Ernesto](https://www.youtube.com/user/neto376/videos?flow=grid&view=0&sort=dd)
 
 1. [Curso Android desde cero #6 | Ciclo de vida de un Activity](https://youtu.be/poipVVd2jzU?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=2)
+    1. Eventos:
+        - `onCreate()`
+            - `onRestart()`
+        - `onStart()`
+        - `onResume()`
+        - `actividad ejecutandose`
+        - `actividad entra en primer plano`
+        - `onPause()`
+        - `onStop()` --> `onRestart()`
+        - `actividad terminandose o en destrucción`
+        - `onDestroy()`
+        - `actividad cerrada`
