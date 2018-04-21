@@ -61,7 +61,9 @@
     1. Debug simple con Mayus+F9 y F7,F8...
 
 8. [Curso Android desde cero #8 | Mensajes emergentes en Android con la clase Toast](https://www.youtube.com/watch?v=ZeBlrtQAmN0&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=9)
-    1. 
+    1. Toast es como el console.log(...) o alert(...) en js.
+    
+9. []()
     
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
