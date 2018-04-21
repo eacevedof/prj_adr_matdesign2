@@ -54,3 +54,4 @@
         - `actividad terminandose o en destrucción`
         - `onDestroy()`
         - `actividad cerrada`
+    
