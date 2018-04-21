@@ -4,48 +4,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+//https://www.youtube.com/watch?v=k9rOy-qH_rY&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=8
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        int iMat = 5;
+        int iQuim = 5;
+        int iFis = 5;
+        int iProm = 0;
+
+        iProm = (iMat + iQuim + iFis)/3;
+
+        if(iProm >= 6)
+        {
+            this.log("Aprobado");
+        }
+        else
+            this.log("Reprobado");
+
     }//onCreate
 
-    //código descargado de: https://mega.nz/#!xQBxEAaZ!MOs69BrKRd9bcVOLA0nnf0Z_Slz4NgTosdlT_Yw_yfo
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(this, "OnStart", Toast.LENGTH_SHORT).show();
-        // La actividad está a punto de hacerse visible.
-    }//onStart
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, "OnResume", Toast.LENGTH_SHORT).show();
-        // La actividad se ha vuelto visible (ahora se "reanuda").
-    }//onResume
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(this, "OnPause", Toast.LENGTH_SHORT).show();
-        // Enfocarse en otra actividad  (esta actividad está a punto de ser "detenida").
-    }//onPause
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(this, "OnStop", Toast.LENGTH_SHORT).show();
-        // La actividad ya no es visible (ahora está "detenida")
-    }//onStop
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(this, "OnDestroy", Toast.LENGTH_SHORT).show();
-        // La actividad está a punto de ser destruida.
-    }//onDestroy
-
+    protected void log(String Text)
+    {
+        Toast.makeText(this,Text,Toast.LENGTH_LONG).show();
+    }//log
 }//MainActivity
+

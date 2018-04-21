@@ -39,10 +39,13 @@
   `Error: This view is not constrained, it only has design time positions, so it will jump to (0,0) unless you add constraints`
   Habia que darle a la varita mágica.
   
+<hr/>  
+  
 ## [Curso Android desde cero (nov - 2017)](https://www.youtube.com/watch?v=tyx05coXixw&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y) - [La Geekpedia De Ernesto](https://www.youtube.com/user/neto376/videos?flow=grid&view=0&sort=dd)
 
-1. [Curso Android desde cero #6 | Ciclo de vida de un Activity](https://youtu.be/poipVVd2jzU?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=2)
+6. [Curso Android desde cero #6 | Ciclo de vida de un Activity](https://youtu.be/poipVVd2jzU?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=2)
     1. Eventos:
+        - [Imagen con el esquema de eventos](https://youtu.be/poipVVd2jzU?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=34)
         - `onCreate()`
             - `onRestart()`
         - `onStart()`
@@ -54,4 +57,11 @@
         - `actividad terminandose o en destrucción`
         - `onDestroy()`
         - `actividad cerrada`
+7. [Curso Android desde cero #7 | Debuggeo de aplicaciones en Android Studio](https://www.youtube.com/watch?v=k9rOy-qH_rY&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=8)
+    1. 
+    
+    
+### Notas
+- `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
+    - No he encontrado solución para esto
     
