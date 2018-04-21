@@ -4,7 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-//https://www.youtube.com/watch?v=k9rOy-qH_rY&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=8
+//VIDEO 8 TOAST
+//https://www.youtube.com/watch?v=ZeBlrtQAmN0&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=9
 public class MainActivity extends AppCompatActivity {
 
     @Override
