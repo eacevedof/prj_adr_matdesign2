@@ -4,28 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-//VIDEO 8 TOAST
-//https://www.youtube.com/watch?v=ZeBlrtQAmN0&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=9
+//Curso Android desde cero #9 | Mi primer Aplicación en Android - Diseño gráfico
+//https://youtu.be/gH7aV28H1Os?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        int iMat = 5;
-        int iQuim = 5;
-        int iFis = 5;
-        int iProm = 0;
-
-        iProm = (iMat + iQuim + iFis)/3;
-
-        if(iProm >= 6)
-        {
-            this.log("Aprobado");
-        }
-        else
-            this.log("Reprobado");
 
     }//onCreate
 

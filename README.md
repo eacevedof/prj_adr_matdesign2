@@ -63,8 +63,10 @@
 8. [Curso Android desde cero #8 | Mensajes emergentes en Android con la clase Toast](https://www.youtube.com/watch?v=ZeBlrtQAmN0&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=9)
     1. Toast es como el console.log(...) o alert(...) en js.
     
-9. []()
-    
+9. [Curso Android desde cero #9 | Mi primer Aplicación en Android - Diseño gráfico](https://www.youtube.com/watch?v=gH7aV28H1Os&index=10&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)
+    1. Ejemplo calculadora.
+    2. Medida **SP** 
+        1. [Explicacion](http://jonsegador.com/2012/09/diferentes-unidades-de-medida-disponibles-en-android-dp-sp-pt-px-mm-in/)
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
