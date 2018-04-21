@@ -65,7 +65,7 @@
     
 9. [Curso Android desde cero #9 | Mi primer Aplicación en Android - Diseño gráfico](https://www.youtube.com/watch?v=gH7aV28H1Os&index=10&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)
     1. Ejemplo calculadora.
-    2. Medida **SP** 
+    2. Medida **SP** Scale-Independent Pixels
         1. [Explicacion](http://jonsegador.com/2012/09/diferentes-unidades-de-medida-disponibles-en-android-dp-sp-pt-px-mm-in/)
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
