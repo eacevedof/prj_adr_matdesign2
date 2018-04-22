@@ -35,7 +35,7 @@
     <RadioGroup
         android:id="@+id/rdgAcciones"
         android:layout_width="342dp"
-        android:layout_height="74dp"
+        android:layout_height="140dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +56,22 @@
             android:layout_weight="1"
             android:text="@string/rdb.2.text"
             android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rdb3"
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rdb.3.text"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rdb4"
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rdb.4.text"
+            android:textSize="24sp" />
     </RadioGroup>
 
     <Button
@@ -63,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:onClick="get_result"
         android:text="@string/but.calcular.hint"
         android:textSize="24sp"
@@ -75,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="@string/tvw.resultado.text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"

@@ -5,6 +5,8 @@
     <string name="edt.val2.hint">Ingresa el segundo valor</string>
     <string name="rdb.1.text">Sumar</string>
     <string name="rdb.2.text">Restar</string>
+    <string name="rdb.3.text">Multiplicar</string>
+    <string name="rdb.4.text">Dividir</string>
     <string name="but.calcular.hint">Calcular</string>
     <string name="tvw.resultado.text">Resultado</string>
 </resources>

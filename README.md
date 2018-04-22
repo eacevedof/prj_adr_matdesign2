@@ -84,12 +84,22 @@
     1. [`res\values\strings.xml`](https://youtu.be/HTc0owuahqg?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=124)
     2. Aislando los textos en el archivo string. name patron: prefijo-componente.id-sin-prefijo.propiedad
     
-12. [Curso Android desde cero #13 | Controles RadioGroup y RadioButton](https://www.youtube.com/watch?v=mKkOZ5Z5mtY)    
+13. [Curso Android desde cero #13 | Controles RadioGroup y RadioButton](https://www.youtube.com/watch?v=mKkOZ5Z5mtY)    
     1. [RadioGroup y RadioButtons](https://youtu.be/mKkOZ5Z5mtY?t=183)
         1. [RadioGroup y layout_height:wrap_content - el efecto que tiene](https://youtu.be/mKkOZ5Z5mtY?t=282)
 
-13. [Curso Android desde cero #14 | Parte lógica de los controles RadioGroup y RadioButton](https://www.youtube.com/watch?v=aI5FCr85fOc)
+14. [Curso Android desde cero #14 | Parte lógica de los controles RadioGroup y RadioButton](https://www.youtube.com/watch?v=aI5FCr85fOc)
     1. [`private RadioButton`](https://youtu.be/aI5FCr85fOc?t=178)
+
+15. [Curso Android desde cero #15 | Ejercicio práctico con RadioGroup y RadioButton](https://www.youtube.com/watch?v=YzwDpid3nVY)
+    1. Radios con cuatro operaciones.
+    
+16. [Curso Android desde cero #16 | Parte lógica del ejercicio practico con RadioGroup y RadioButton](https://www.youtube.com/watch?v=67PmTreN0KI&t=5s)
+
+17. [Curso Android desde cero #17 | Control CheckBox en Android Studio](https://www.youtube.com/watch?v=3Sx92S6Vs98&t=2s)
+
+        
+
 
 
 

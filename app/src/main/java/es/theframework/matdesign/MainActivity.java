@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity
 {
     private EditText edtVal1,edtVal2;
     private TextView tvw1;
-    private RadioButton rdb1,rdb2;
+    private RadioButton rdbSum,rdbRest,rdbMult,rdbDiv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity
         edtVal1 = (EditText)findViewById(R.id.edtVal1);
         edtVal2 = (EditText)findViewById(R.id.edtVal2);
         tvw1 = (TextView) findViewById(R.id.tvwResultado);
-        rdb1 = (RadioButton)findViewById(R.id.rdb1);
-        rdb2 = (RadioButton)findViewById(R.id.rdb2);
+        rdbSum = (RadioButton)findViewById(R.id.rdb1);
+        rdbRest = (RadioButton)findViewById(R.id.rdb2);
+        rdbMult = (RadioButton)findViewById(R.id.rdb3);
+        rdbDiv = (RadioButton)findViewById(R.id.rdb4);
         alert("onCreate");
     }//onCreate
 
@@ -39,23 +41,43 @@ public class MainActivity extends AppCompatActivity
     {
         String sVal1 = edtVal1.getText().toString();
         String sVal2 = edtVal2.getText().toString();
-        String sRdb1 = rdb1.getText().toString();
-        String sRdb2 = rdb2.getText().toString();
+        String srdbSum = rdbSum.getText().toString();
+        String srdbRest = rdbRest.getText().toString();
 
         int iVal1 = Integer.parseInt(sVal1);
         int iVal2 = Integer.parseInt(sVal2);
 
-        if(rdb1.isChecked()== true)
+        if(rdbSum.isChecked()== true)
         {
             int iSuma = iVal1 + iVal2;
             String sR = String.valueOf(iSuma);
             tvw1.setText(sR);
         }
-        else if(rdb2.isChecked()==true)
+        else if(rdbRest.isChecked()==true)
         {
-            int iResta = iVal1 - iVal2;
-            String sR = String.valueOf(iResta);
+            int iResult = iVal1 - iVal2;
+            String sR = String.valueOf(iResult);
             tvw1.setText(sR);
+        }
+        else if(rdbMult.isChecked())
+        {
+            int iResult = iVal1 * iVal2;
+            String sR = String.valueOf(iResult);
+            tvw1.setText(sR);
+        }
+        else if(rdbDiv.isChecked())
+        {
+            if(iVal2!=0) {
+                double fResult = ((float)iVal1) / iVal2;
+                fResult = round(fResult,2);
+                String sR = String.valueOf(fResult);
+                tvw1.setText(sR);
+            }
+            else
+            {
+                alert("El valor 2 debe ser distinto de 0");
+            }
+
         }
         else
         {
@@ -67,7 +89,7 @@ public class MainActivity extends AppCompatActivity
     protected void alert(String sText)
     {
         String sMsg = "[ LOG ]".concat(sText);
-        Toast.makeText(this,sText,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,sMsg,Toast.LENGTH_LONG).show();
     }//log
 
     public static double round(double value, int places) {
