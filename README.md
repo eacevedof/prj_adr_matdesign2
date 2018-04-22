@@ -97,9 +97,7 @@
 16. [Curso Android desde cero #16 | Parte lógica del ejercicio practico con RadioGroup y RadioButton](https://www.youtube.com/watch?v=67PmTreN0KI&t=5s)
 
 17. [Curso Android desde cero #17 | Control CheckBox en Android Studio](https://www.youtube.com/watch?v=3Sx92S6Vs98&t=2s)
-
-        
-
+    1.[CheckBox](https://youtu.be/3Sx92S6Vs98?t=125)
 
 
 
