@@ -67,6 +67,7 @@
     1. Ejemplo calculadora.
     2. Medida **SP** Scale-Independent Pixels
         1. [Explicacion](http://jonsegador.com/2012/09/diferentes-unidades-de-medida-disponibles-en-android-dp-sp-pt-px-mm-in/)
+        
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto

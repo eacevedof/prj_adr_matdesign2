@@ -10,10 +10,47 @@
         android:id="@+id/numUno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Primer valor ej. 123"
         android:inputType="number"
-        android:textSize="25sp"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="26dp" />
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numDos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Segundo valor ej. 88"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numUno" />
+
+    <Button
+        android:id="@+id/butSumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Sumar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numDos" />
+
+    <TextView
+        android:id="@+id/tvwResultado"
+        android:layout_width="131dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Resultado"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butSumar"
+        tools:textAlignment="center" />
 </android.support.constraint.ConstraintLayout>
