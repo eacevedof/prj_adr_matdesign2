@@ -68,6 +68,9 @@
     2. Medida **SP** Scale-Independent Pixels
         1. [Explicacion](http://jonsegador.com/2012/09/diferentes-unidades-de-medida-disponibles-en-android-dp-sp-pt-px-mm-in/)
         
+10. [Curso Android desde cero #10 | Mi primer Aplicación en Android - Diseño lógico](https://www.youtube.com/watch?v=v1zbFY4Kmtk&index=11&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)        
+    1. Aplicando codigo a la clase MainActivity.java que controle la app anterior
+
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
