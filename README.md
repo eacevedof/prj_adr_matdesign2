@@ -70,7 +70,14 @@
         
 10. [Curso Android desde cero #10 | Mi primer Aplicación en Android - Diseño lógico](https://www.youtube.com/watch?v=v1zbFY4Kmtk&index=11&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)        
     1. Aplicando codigo a la clase MainActivity.java que controle la app anterior
+    2. [Explicación de la clase view como argumento en la funcion Sumar(..)](https://youtu.be/v1zbFY4Kmtk?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=966)
+    3. [Warning - Aplicando distancia entre componente superior y el margen superior del main layout](https://youtu.be/v1zbFY4Kmtk?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=1501)
+    4. [Warning - Hardcoded text](https://youtu.be/v1zbFY4Kmtk?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=1562)
 
+11. [Curso Android desde cero #11 | Ejercicio práctico (Aplicación móvil)](https://www.youtube.com/watch?v=Ml9hPWd2SCM&index=12&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)    
+    1. [Compatibilidad con API15 IceCreamSandwich pq? por ser 100% compatible](https://youtu.be/Ml9hPWd2SCM?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=142)
+    
+    
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
