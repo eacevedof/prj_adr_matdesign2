@@ -12,11 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
-        android:text="TextView"
+        android:text="@string/tvw.estatus.text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Estatus del Alumno" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtMate"
@@ -25,7 +24,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="44dp"
         android:ems="10"
-        android:hint="Mátematicas"
+        android:hint="@string/edt.mat.hint"
         android:inputType="number"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +37,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Física"
+        android:hint="@string/edt.fisica.hint"
         android:inputType="number"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +50,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Química"
+        android:hint="@string/edt.quim.hint"
         android:inputType="number"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +63,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="36dp"
         android:onClick="get_status"
-        android:text="Evaluar"
+        android:text="@string/but.evaluar.text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtQuimica" />
 

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">matdesign</string>
+    <string name="tvw.estatus.text">Estatus del Alumno</string>
+    <string name="edt.mat.hint">Matemáticas</string>
+    <string name="edt.fisica.hint">Física</string>
+    <string name="edt.quim.hint">Química</string>
+    <string name="but.evaluar.text">Química</string>
 </resources>

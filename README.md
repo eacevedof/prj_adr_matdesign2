@@ -80,6 +80,10 @@
     3. Cambio de this.log a this.alert(sText)
     4. Uso la clase Color.<CONSTANTE>
     
+12. [Curso Android desde cero #12 | Hardcoded string should use string resource](https://www.youtube.com/watch?v=HTc0owuahqg&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=13)    
+    1. [`res\values\strings.xml`](https://youtu.be/HTc0owuahqg?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=124)
+    2. Aislando los textos en el archivo string. name patron: prefijo-componente.id-sin-prefijo.propiedad
+    
     
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
