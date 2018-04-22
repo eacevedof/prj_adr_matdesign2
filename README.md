@@ -76,6 +76,9 @@
 
 11. [Curso Android desde cero #11 | Ejercicio práctico (Aplicación móvil)](https://www.youtube.com/watch?v=Ml9hPWd2SCM&index=12&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)    
     1. [Compatibilidad con API15 IceCreamSandwich pq? por ser 100% compatible](https://youtu.be/Ml9hPWd2SCM?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=142)
+    2. Aplico redondeo en 2 posiciones
+    3. Cambio de this.log a this.alert(sText)
+    4. Uso la clase Color.<CONSTANTE>
     
     
 ### Notas

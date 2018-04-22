@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         double fProm = (iMat+iFis+iQuim)/3.00;
         fProm = round(fProm,2);
 
-        log(String.valueOf(fProm));
+        alert(String.valueOf(fProm));
         tvwEstatus.setTextColor(Color.RED);
         tvwEstatus.setText("Reprobado: ".concat(String.valueOf(fProm)));
         if(fProm>4.5)
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
 
     }//evaluate
 
-    protected void log(String sText)
+    protected void alert(String sText)
     {
         String sMsg = "[ LOG ]".concat(sText);
         Toast.makeText(this,sText,Toast.LENGTH_LONG).show();
