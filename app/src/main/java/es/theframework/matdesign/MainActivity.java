@@ -40,14 +40,15 @@ public class MainActivity extends AppCompatActivity
 
     public void get_result(View oView)
     {
+        int iVal1=0, iVal2=0;
         String sResult = "";
         String sVal1 = edtVal1.getText().toString();
         String sVal2 = edtVal2.getText().toString();
         String schkSum = chkSum.getText().toString();
         String schkRest = chkRest.getText().toString();
 
-        int iVal1 = Integer.parseInt(sVal1);
-        int iVal2 = Integer.parseInt(sVal2);
+        if(is_numeric(sVal1)) iVal1 = Integer.parseInt(sVal1);
+        if(is_numeric(sVal2)) iVal2 = Integer.parseInt(sVal2);
 
         if(chkSum.isChecked())
         {
@@ -71,6 +72,10 @@ public class MainActivity extends AppCompatActivity
         }
 
     }//get_result
+
+    protected boolean is_numeric(String sString) {
+        return sString != null && sString.matches("[-+]?\\d*\\.?\\d+");
+    }
 
     protected void alert(String sText)
     {
