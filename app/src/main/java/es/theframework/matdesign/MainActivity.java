@@ -31,15 +31,16 @@ public class MainActivity extends AppCompatActivity
         edtVal1 = (EditText)findViewById(R.id.edtVal1);
         edtVal2 = (EditText)findViewById(R.id.edtVal2);
         tvw1 = (TextView) findViewById(R.id.tvwResultado);
-        chkSum = (CheckBox) findViewById(R.id.rdb1);
-        chkRest = (CheckBox)findViewById(R.id.rdb2);
-        chkMult = (CheckBox)findViewById(R.id.rdb3);
-        chkDiv = (CheckBox)findViewById(R.id.rdb4);
+        chkSum = (CheckBox) findViewById(R.id.chkSumar);
+        chkRest = (CheckBox)findViewById(R.id.chkRestar);
+        //chkMult = (CheckBox)findViewById(R.id.rdb3);
+        //chkDiv = (CheckBox)findViewById(R.id.rdb4);
         alert("onCreate");
     }//onCreate
 
     public void get_result(View oView)
     {
+        String sResult = "";
         String sVal1 = edtVal1.getText().toString();
         String sVal2 = edtVal2.getText().toString();
         String schkSum = chkSum.getText().toString();
@@ -48,41 +49,25 @@ public class MainActivity extends AppCompatActivity
         int iVal1 = Integer.parseInt(sVal1);
         int iVal2 = Integer.parseInt(sVal2);
 
-        if(chkSum.isChecked()== true)
+        if(chkSum.isChecked())
         {
             int iSuma = iVal1 + iVal2;
-            String sR = String.valueOf(iSuma);
-            tvw1.setText(sR);
+            sResult = sResult.concat("\nResultado de la suma:".concat(String.valueOf(iSuma)));
         }
-        else if(chkRest.isChecked()==true)
+
+        if(chkRest.isChecked())
         {
             int iResult = iVal1 - iVal2;
-            String sR = String.valueOf(iResult);
-            tvw1.setText(sR);
+            sResult = sResult.concat("\nResultado de la resta:".concat(String.valueOf(iResult)));
         }
-        else if(chkMult.isChecked())
-        {
-            int iResult = iVal1 * iVal2;
-            String sR = String.valueOf(iResult);
-            tvw1.setText(sR);
-        }
-        else if(chkDiv.isChecked())
-        {
-            if(iVal2!=0) {
-                double fResult = ((float)iVal1) / iVal2;
-                fResult = round(fResult,2);
-                String sR = String.valueOf(fResult);
-                tvw1.setText(sR);
-            }
-            else
-            {
-                alert("El valor 2 debe ser distinto de 0");
-            }
 
+        if(!sResult.equals(""))
+        {
+            tvw1.setText(sResult);
         }
         else
         {
-            alert("Debe seleccionar alguna acción!!");
+            alert("Debe seleccionar alguna opreación!!");
         }
 
     }//get_result
