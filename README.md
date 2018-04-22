@@ -84,7 +84,10 @@
     1. [`res\values\strings.xml`](https://youtu.be/HTc0owuahqg?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=124)
     2. Aislando los textos en el archivo string. name patron: prefijo-componente.id-sin-prefijo.propiedad
     
+12. [Curso Android desde cero #13 | Controles RadioGroup y RadioButton](https://www.youtube.com/watch?v=mKkOZ5Z5mtY)    
+    1. 
     
+        
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto

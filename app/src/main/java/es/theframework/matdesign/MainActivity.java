@@ -13,50 +13,18 @@ import org.w3c.dom.Text;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-//Curso Android desde cero #11 | Ejercicio práctico (Aplicación móvil)
-//https://www.youtube.com/watch?v=Ml9hPWd2SCM&index=12&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y
+//Curso Android desde cero #13 | Controles RadioGroup y RadioButton
+//https://www.youtube.com/watch?v=mKkOZ5Z5mtY
 public class MainActivity extends AppCompatActivity
 {
-    private EditText edtMate;
-    private EditText edtFisica;
-    private EditText edtQuimica;
-    private TextView tvwEstatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edtMate = (EditText)findViewById(R.id.edtMate);
-        edtFisica = (EditText)findViewById(R.id.edtFisica);
-        edtQuimica = (EditText)findViewById(R.id.edtQuimica);
-        tvwEstatus = (TextView)(findViewById(R.id.tvwEstatus));
-
     }//onCreate
 
-    public void get_status(View oView)
-    {
-        String sMat = edtMate.getText().toString();
-        String sFis = edtFisica.getText().toString();
-        String sQuim = edtQuimica.getText().toString();
-
-        int iMat = Integer.parseInt(sMat);
-        int iFis = Integer.parseInt(sFis);
-        int iQuim = Integer.parseInt(sQuim);
-
-        double fProm = (iMat+iFis+iQuim)/3.00;
-        fProm = round(fProm,2);
-
-        alert(String.valueOf(fProm));
-        tvwEstatus.setTextColor(Color.RED);
-        tvwEstatus.setText("Reprobado: ".concat(String.valueOf(fProm)));
-        if(fProm>4.5)
-        {
-            tvwEstatus.setTextColor(Color.GREEN);
-            tvwEstatus.setText("Aprobado: ".concat(String.valueOf(fProm)));
-        }
-
-    }//evaluate
 
     protected void alert(String sText)
     {
