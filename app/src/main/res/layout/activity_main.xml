@@ -64,13 +64,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:onClick="get_result"
         android:text="@string/but.calcular.hint"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rdgAcciones" />
 
     <TextView
-        android:id="@+id/txvResultado"
+        android:id="@+id/tvwResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

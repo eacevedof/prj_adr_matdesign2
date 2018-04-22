@@ -87,6 +87,15 @@
 12. [Curso Android desde cero #13 | Controles RadioGroup y RadioButton](https://www.youtube.com/watch?v=mKkOZ5Z5mtY)    
     1. [RadioGroup y RadioButtons](https://youtu.be/mKkOZ5Z5mtY?t=183)
         1. [RadioGroup y layout_height:wrap_content - el efecto que tiene](https://youtu.be/mKkOZ5Z5mtY?t=282)
+
+13. [Curso Android desde cero #14 | Parte lógica de los controles RadioGroup y RadioButton](https://www.youtube.com/watch?v=aI5FCr85fOc)
+    1. [`private RadioButton`](https://youtu.be/aI5FCr85fOc?t=178)
+
+
+
+
+
+
         
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
