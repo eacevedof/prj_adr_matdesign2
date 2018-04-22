@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TheFramework.es</string>
+
+    <string name="edt.val1.hint">Ingresa el primer valor</string>
+    <string name="edt.val2.hint">Ingresa el segundo valor</string>
+    <string name="rdb.1.text">Sumar</string>
+    <string name="rdb.2.text">Restar</string>
+    <string name="but.calcular.hint">Calcular</string>
+    <string name="tvw.resultado.text">Resultado</string>
 </resources>
