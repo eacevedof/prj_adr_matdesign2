@@ -110,9 +110,11 @@
         1. `//ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,arOpciones);
             ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,R.layout.spinner_item_geekpedia,arOpciones);`
 
-20. [control listview - Listado equivalente a un "grid" en móvil](https://www.youtube.com/watch?v=0Aoz5F_pkkg)
+20. [Curso Android desde cero #20 | Control ListView en Android Studio equivalente a un "grid" en móvil](https://www.youtube.com/watch?v=0Aoz5F_pkkg)
+    1. No se pq he tenido que usar la varita mágica, no se pq se superponia el textview sobre el listview
+    
+21. [Curso Android desde cero #21 | Control ImageButton en Android Studio](https://www.youtube.com/watch?v=VRSWRvYeKTc)
     1. 
-
         
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
