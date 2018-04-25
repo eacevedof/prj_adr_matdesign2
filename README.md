@@ -108,6 +108,8 @@
     1. [R.layout.<nombre-archivo-xml>]()
         1. `//ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,arOpciones);
             ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,R.layout.spinner_item_geekpedia,arOpciones);`
+20. [control listview - Listado equivalente a un "grid" en móvil]()
+    1. 
 
         
 ### Notas
