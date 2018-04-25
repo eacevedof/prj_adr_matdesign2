@@ -9,4 +9,5 @@
     <string name="rdb.4.text">Dividir</string>
     <string name="but.calcular.hint">Calcular</string>
     <string name="tvw.resultado.text">Resultado</string>
+    <string name="tvw.one.text">Seleccione un item</string>
 </resources>

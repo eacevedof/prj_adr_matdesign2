@@ -109,7 +109,8 @@
     2. [R.layout.<nombre-archivo-xml>](https://youtu.be/rCT7EDJ3em4?t=555)
         1. `//ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,arOpciones);
             ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,R.layout.spinner_item_geekpedia,arOpciones);`
-20. [control listview - Listado equivalente a un "grid" en móvil]()
+
+20. [control listview - Listado equivalente a un "grid" en móvil](https://www.youtube.com/watch?v=0Aoz5F_pkkg)
     1. 
 
         

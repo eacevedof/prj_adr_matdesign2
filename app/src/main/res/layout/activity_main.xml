@@ -8,23 +8,26 @@
 
     <ListView
         android:id="@+id/lvwOne"
-        android:layout_width="364dp"
-        android:layout_height="269dp"
+        android:layout_width="349dp"
+        android:layout_height="284dp"
+        android:layout_marginBottom="166dp"
         android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="137dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvwOne" />
 
     <TextView
         android:id="@+id/tvwOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="28dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="-"
+        android:text="@string/tvw.one.text"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/lvwOne"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
