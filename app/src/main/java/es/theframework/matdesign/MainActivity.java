@@ -4,9 +4,11 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -24,78 +27,33 @@ import TheFramework.ComponentUtils;
 public class MainActivity extends AppCompatActivity
 {
     private ComponentUtils oUtils;
-    private EditText edtVal1,edtVal2;
-    private TextView tvwResult;
-    private Spinner spnAccion;
+    private TextView tvwOne;
+    private ListView lvwOne;
+
+    private String arNombres[] = {"Samuel","Valentina","Santiago","Alejandro","Valeria","Benjamin",
+                                    "Gerardo","Carlos","David","Sofia"};
+    private String arEdades[] = {"18","25","32","17","24","20","27","15","19","23"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //oUtils = new ComponentUtils(this);
-        edtVal1 = (EditText)findViewById(R.id.edtVal1);
-        edtVal2 = (EditText)findViewById(R.id.edtVal2);
-        tvwResult = (TextView) findViewById(R.id.tvwResultado);
-        spnAccion = (Spinner) findViewById(R.id.spnAccion);
-
-        load_spinner();
         alert("onCreate");
+        tvwOne = (TextView)findViewById(R.id.tvwOne);
+        lvwOne = (ListView)findViewById(R.id.lvwOne);
 
+        ArrayAdapter<String> oAdapter = new ArrayAdapter<String>(this,R.layout.list_item_geekpedia,arNombres);
+        lvwOne.setAdapter(oAdapter);
+        lvwOne.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                tvwOne.setText("La edad de ".concat(lvwOne.getItemAtPosition(position).toString()).concat(" es ").concat(arEdades[position]).concat(" años"));
+            }
+        });
         //double g = ComponentUtils.get_round(3);
     }//onCreate
 
-    private void load_spinner()
-    {
-        String [] arOpciones = {"sumar","restar","multiplicar","dividir"};
-        //ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,arOpciones);
-        ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,R.layout.spinner_item_geekpedia,arOpciones);
-
-        spnAccion.setAdapter(oAdapter);
-    }//load_spinner
-
-    public void get_result(View oView)
-    {
-        int iVal1=0, iVal2=0;
-        String sResult = "";
-        int iResult = 0;
-        String sVal1 = edtVal1.getText().toString();
-        String sVal2 = edtVal2.getText().toString();
-
-        if(is_numeric(sVal1)) iVal1 = Integer.parseInt(sVal1);
-        if(is_numeric(sVal2)) iVal2 = Integer.parseInt(sVal2);
-
-        String sSelected = spnAccion.getSelectedItem().toString();
-        if(sSelected.equals("sumar"))
-        {
-            iResult = iVal1+iVal2;
-            sResult = "Resultado de la suma: ".concat(String.valueOf(iResult));
-
-        }
-        else if(sSelected.equals("restar"))
-        {
-            iResult = iVal1-iVal2;
-            sResult = "Resultado de la resta: ".concat(String.valueOf(iResult));
-
-        }
-        else if(sSelected.equals("multiplicar"))
-        {
-            iResult = iVal1*iVal2;
-            sResult = "Resultado de la multiplicación: ".concat(String.valueOf(iResult));
-
-        }
-        else if(sSelected.equals("dividir"))
-        {
-            if(iVal2!=0) iResult = iVal1/iVal2;
-            else alert("Divisor igual a 0!");
-            sResult = "Resultado de la división: ".concat(String.valueOf(iResult));
-        }
-        else
-            alert("Debe seleccionar una operación");
-
-
-        tvwResult.setText(sResult);
-    }//get_result
 
     protected boolean is_numeric(String sString)
     {

@@ -6,63 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edtVal1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ListView
+        android:id="@+id/lvwOne"
+        android:layout_width="364dp"
+        android:layout_height="269dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:hint="@string/edt.val1.hint"
-        android:inputType="number"
-        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edtVal2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/edt.val2.hint"
-        android:inputType="number"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtVal1" />
-
-    <Button
-        android:id="@+id/butCalcular"
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:onClick="get_result"
-        android:text="@string/but.calcular.hint"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnAccion" />
+        tools:layout_editor_absoluteY="137dp" />
 
     <TextView
-        android:id="@+id/tvwResultado"
+        android:id="@+id/tvwOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/tvw.resultado.text"
+        android:layout_marginTop="16dp"
+        android:text="-"
         android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lvwOne"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butCalcular" />
-
-    <Spinner
-        android:id="@+id/spnAccion"
-        android:layout_width="285dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtVal2" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

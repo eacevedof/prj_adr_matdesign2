@@ -104,8 +104,9 @@
     2. [Configurando ArrayAdapter para cargar spinner](https://youtu.be/dp_ruQOP1sU?t=845)
     3. `oSpinner.getSelectedItem().toString();`
 
-19. []()
-    1. [R.layout.<nombre-archivo-xml>]()
+19. [Curso Android desde cero #19 | Cómo personalizar un Spinner en Android Studio](https://www.youtube.com/watch?v=rCT7EDJ3em4)
+    1. [Configurar "elemento" spinner xml](https://youtu.be/rCT7EDJ3em4?t=178)
+    2. [R.layout.<nombre-archivo-xml>](https://youtu.be/rCT7EDJ3em4?t=555)
         1. `//ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,arOpciones);
             ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,R.layout.spinner_item_geekpedia,arOpciones);`
 20. [control listview - Listado equivalente a un "grid" en móvil]()
