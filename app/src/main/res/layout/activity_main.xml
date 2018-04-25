@@ -37,44 +37,32 @@
         android:layout_width="wrap_content"
         android:layout_height="54dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:onClick="get_result"
         android:text="@string/but.calcular.hint"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chkRestar" />
+        app:layout_constraintTop_toBottomOf="@+id/spnAccion" />
 
     <TextView
         android:id="@+id/tvwResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="@string/tvw.resultado.text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/butCalcular" />
 
-    <CheckBox
-        android:id="@+id/chkSumar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Spinner
+        android:id="@+id/spnAccion"
+        android:layout_width="285dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/rdb.1.text"
+        android:layout_marginTop="20dp"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtVal2" />
-
-    <CheckBox
-        android:id="@+id/chkRestar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/rdb.2.text"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chkSumar" />
 
 </android.support.constraint.ConstraintLayout>

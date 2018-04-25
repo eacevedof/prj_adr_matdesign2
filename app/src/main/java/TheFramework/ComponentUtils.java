@@ -14,6 +14,8 @@ public class ComponentUtils
 {
     public Application oAdrapp;
 
+    public ComponentUtils() {;}
+
     public ComponentUtils(Application oAdrapp)
     {
         this.oAdrapp = oAdrapp;

@@ -100,9 +100,14 @@
     1.[CheckBox](https://youtu.be/3Sx92S6Vs98?t=125)
 
 18. [Curso Android desde cero #18 | Control Spinner en Android Studio](https://www.youtube.com/watch?v=dp_ruQOP1sU&t=4s)
-    1. 
+    1. Es como el elemento select en html
+    2. [Configurando ArrayAdapter para cargar spinner](https://youtu.be/dp_ruQOP1sU?t=845)
+    3. `oSpinner.getSelectedItem().toString();`
 
-
+19. []()
+    1. [R.layout.<nombre-archivo-xml>]()
+        1. `//ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,arOpciones);
+            ArrayAdapter <String> oAdapter = new ArrayAdapter<String>(this,R.layout.spinner_item_geekpedia,arOpciones);`
 
         
 ### Notas
