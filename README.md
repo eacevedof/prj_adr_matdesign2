@@ -112,10 +112,18 @@
 
 20. [Curso Android desde cero #20 | Control ListView en Android Studio equivalente a un "grid" en móvil](https://www.youtube.com/watch?v=0Aoz5F_pkkg)
     1. No se pq he tenido que usar la varita mágica, no se pq se superponia el textview sobre el listview
+    2. [`oListView.setOnItemClickListener(new OnI)` Clase Anónima](https://youtu.be/0Aoz5F_pkkg?t=1071)
     
 21. [Curso Android desde cero #21 | Control ImageButton en Android Studio](https://www.youtube.com/watch?v=VRSWRvYeKTc)
-    1. 
-        
+    1. Son botones a los que se les asocia una imagen. Seria algo como:`<a href=""><img src=""/></a>` 
+    2. Es recomendable si se van a personalizar imagenes para botones que cumplan con un tamaño max de 50x50 px
+    3. El nombre de las imagenes tiene que estar en minusculas sino puede dar errror
+    4. Para incluir una imagen al proyecto hay que pegarla en la carpeta `app/res/minmap`
+    5. Despues de tener el archivo dentro de `res` cuando añadamos un boton tipo imagen y nos muestre el dialogo de selección en la
+       parte `Drawable` aparecera como disponible
+    6. La propiedad `contentDescription` es obligatoria llenarla. Es una simple descripcion orientativa. No aparecera en ningun sitio.
+    7. Ese texto hay que añadirlo al archivo `strings.xml` 
+      
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
