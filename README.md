@@ -123,7 +123,20 @@
        parte `Drawable` aparecera como disponible
     6. La propiedad `contentDescription` es obligatoria llenarla. Es una simple descripcion orientativa. No aparecera en ningun sitio.
     7. Ese texto hay que añadirlo al archivo `strings.xml` 
-      
+
+30. [Curso Android desde cero #30 | Base de datos - Altas (SQLite) en Android](https://www.youtube.com/watch?v=TxkdWX3UaNk)
+    1. `android.database.sqlite.SQLiteOpenHelper` CLASE para conectar con sqlite
+    2. Hay que crear una clase que conecta heredando de la clase anterior. Por ejemplo: `class AdminSQLiteOpenHelper` 
+    3. La clase hija se debe crear como Java Class en java/<paquete-generado-por-la-app/
+    4. Despues de escribir la clase al lado de extends presionamos alt+enter, a continuacion seleccionaremos implementar methods
+    5. Esto generara 2 metodos: onCreate(oSqliteDatabase):void y onUpgrade(oSqliteDatabase):int
+    6. Continua con error. Esto es pq tambien hay que heredadr el constructor. ctrl+enter Create constructor match super
+    7. Hay que seleccionar el constructor con 4 parámetros.
+    8. Donde se guarda la bd sqlite?
+    9. Se puede crear una bd sin el helper e incluirla en la app?
+    
+31. [Conexion sqlite]()
+    1.       
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
