@@ -1,10 +1,8 @@
-package TheFramework;
+package theframework.android.components;
 
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 import android.app.Application;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.Spinner;
 import java.math.BigDecimal;
 import java.math.RoundingMode;

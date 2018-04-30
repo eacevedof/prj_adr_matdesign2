@@ -1,26 +1,18 @@
 package es.theframework.matdesign;
 
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import TheFramework.ComponentUtils;
+import theframework.android.components.ComponentUtils;
 
 //Curso Android desde cero #14 | Parte lógica de los controles RadioGroup y RadioButton
 //https://www.youtube.com/watch?v=aI5FCr85fOc
