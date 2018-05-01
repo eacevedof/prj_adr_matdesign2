@@ -14,7 +14,7 @@ public class ComponentDB extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase oSQLiteDb) {
-        oSQLiteDb.execSQL("CREATE TABLE articulos(codigo int primary key )");
+        oSQLiteDb.execSQL("CREATE TABLE articulos(codigo int primary key,descripcion text, precio real )");
     }
 
     @Override

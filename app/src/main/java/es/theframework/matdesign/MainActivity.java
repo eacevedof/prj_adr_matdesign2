@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity
                 edtDescripcion.setText("");
             }
             else
-                alert("El artículo "+sCodigo+" no existe!")
+                alert("El artículo "+sCodigo+" no existe!");
         }
         else
         {
@@ -126,6 +126,36 @@ public class MainActivity extends AppCompatActivity
         }
         oDbRW.close();
     }//borrar
+
+    public void modificar(View oView)
+    {
+        oDb = new ComponentDB(this,"db_framework",null,1);
+        SQLiteDatabase oDbRW = oDb.getWritableDatabase();
+        String sCodigo = edtCodigo.getText().toString();
+        String sDescripcion = edtDescripcion.getText().toString();
+        String sPrecio = edtPrecio.getText().toString();
+
+        if(!sCodigo.isEmpty() && !sDescripcion.isEmpty() && !sPrecio.isEmpty()) {
+            ContentValues oContVal = new ContentValues();
+            oContVal.put("codigo",sCodigo);
+            oContVal.put("precio",sPrecio);
+            oContVal.put("descripcion",sDescripcion);
+            int iCantidad = oDbRW.update("articulos",oContVal,"codigo="+sCodigo,null);
+            if(iCantidad==1)
+            {
+                alert("Articulo: "+sCodigo+" modificado correctamente");
+            }
+            else
+            {
+                alert("No se ha encontrado el articulo:"+sCodigo);
+            }
+        }
+        else
+        {
+            alert("Debes llenar todos los campos");
+        }
+        oDbRW.close();
+    }//modificar
 
     protected boolean is_numeric(String sString)
     {

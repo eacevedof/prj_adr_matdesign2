@@ -10,61 +10,74 @@
         android:id="@+id/edtCodigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/edt.codigo.hint"
         android:inputType="number"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:hint="@string/edt.descripcion.hint"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="80dp" />
+        app:layout_constraintStart_toStartOf="@+id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigo" />
 
     <EditText
         android:id="@+id/edtPrecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:hint="@string/edt.precio.hint"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="144dp" />
+        app:layout_constraintStart_toStartOf="@+id/edtDescription"
+        app:layout_constraintTop_toBottomOf="@+id/edtDescription" />
 
     <Button
         android:id="@+id/butBuscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="31dp"
+        android:onClick="buscar"
         android:text="@string/but.buscar.text"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="221dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPrecio" />
 
     <Button
         android:id="@+id/butInsertar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:onClick="registrar"
         android:text="@string/but.insertar.text"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="287dp" />
+        app:layout_constraintStart_toStartOf="@+id/butBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/butBuscar" />
 
     <Button
         android:id="@+id/butModificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="modificar"
         android:text="@string/but.modificar.text"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="355dp" />
+        app:layout_constraintStart_toStartOf="@+id/butInsertar"
+        app:layout_constraintTop_toBottomOf="@+id/butInsertar" />
 
     <Button
         android:id="@+id/butBorrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="borrar"
         android:text="@string/but.borrar.text"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="419dp" />
+        app:layout_constraintStart_toStartOf="@+id/butModificar"
+        app:layout_constraintTop_toBottomOf="@+id/butModificar" />
 </android.support.constraint.ConstraintLayout>
