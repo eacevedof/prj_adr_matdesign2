@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/edt.codigo.hint"
         android:inputType="number"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="16dp" />
@@ -20,8 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/edt.descripcion.hint"
         android:inputType="textPersonName"
-        android:text="Name"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="80dp" />
 
@@ -30,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/edt.precio.hint"
         android:inputType="numberDecimal"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="144dp" />
@@ -38,7 +40,7 @@
         android:id="@+id/butBuscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/but.buscar.text"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="221dp" />
 
@@ -46,7 +48,7 @@
         android:id="@+id/butInsertar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/but.insertar.text"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="287dp" />
 
@@ -54,7 +56,7 @@
         android:id="@+id/butActualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/but.modificar.text"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="355dp" />
 
@@ -62,7 +64,7 @@
         android:id="@+id/butBorrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/but.borrar.text"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="419dp" />
 </android.support.constraint.ConstraintLayout>

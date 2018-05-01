@@ -145,9 +145,11 @@
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
     
-- `strings.xml`
+- `strings.xml`:
+    - Creo que es mejor: <tipo>.<propiedad>.<id> Piensatelo!
     - `edt.codigo.hint`
     - `rdb.4.text`
     - `tvw.resultado.text`
     - `but.modificar.text`
+    
     
