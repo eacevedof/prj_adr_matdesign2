@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity
         oDb = new ComponentDB(this,"db_framework",null,1);
         SQLiteDatabase oDbRW = oDb.getWritableDatabase();
         String sCodigo = edtCodigo.getText().toString();
+        alert(sCodigo);
         if(!sCodigo.isEmpty())
         {
             String sSQL = "SELECT descripcion,precio FROM articulos WHERE codigo="+sCodigo;
