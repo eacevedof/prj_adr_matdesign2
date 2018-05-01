@@ -1,6 +1,7 @@
 package es.theframework.matdesign;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -73,6 +74,33 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, "Debes llenar todos los campos", Toast.LENGTH_LONG).show();
         }
     }//registrar
+
+    public void buscar(View oView)
+    {
+        oDb = new ComponentDB(this,"db_framework",null,1);
+        SQLiteDatabase oDbRW = oDb.getWritableDatabase();
+        String sCodigo = edtCodigo.getText().toString();
+        if(!sCodigo.isEmpty())
+        {
+            String sSQL = "SELECT descripcion,precio FROM articulos WHERE codigo="+sCodigo;
+            Cursor oCursor = oDbRW.rawQuery(sSQL,null);
+            if(oCursor.moveToFirst())
+            {
+                //https://youtu.be/KAo5-ayChbs?t=524
+                edtDescripcion.setText(oCursor.getString(0));
+                edtPrecio.setText(oCursor.getString(1));
+            }
+            else
+            {
+                alert("No se han encontrado resultados para el código:"+sCodigo);
+            }
+            oCursor.close();
+        }
+        else
+        {
+            alert("Debes introducir el código del artículo");
+        }
+    }//buscar
 
     protected boolean is_numeric(String sString)
     {

@@ -139,14 +139,20 @@
     
 31. [Curso Android desde cero #31 | Base de datos – Consultas (SQLite) en Android](https://www.youtube.com/watch?v=TxkdWX3UaNk)
     1. `public void Buscar(View oView)` 
-    
+    2. `oDb = new ComponentDB(this,"db_framework",null,1);`
+    3. `SQLiteDatabase oDbRW = oDb.getWritableDatabase();`
+    4. `Cursor oCursor = oDbRW.rawQuery(sSQL,null);`
+    5. `oCursor.close()`
+
+32. [Curso Android desde cero #32 | Base de datos – Bajas (SQLite) en Android](https://www.youtube.com/watch?v=C7A9ULyBX5Y)    
+    1. 
        
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
     
 - `strings.xml`:
-    - Creo que es mejor: <tipo>.<propiedad>.<id> Piensatelo!
+    - Creo que es mejor: &#x3C;tipo&#x3E;.&#x3C;propiedad&#x3E;.&#x3C;id&#x3E; Piensatelo!
     - `edt.codigo.hint`
     - `rdb.4.text`
     - `tvw.resultado.text`
