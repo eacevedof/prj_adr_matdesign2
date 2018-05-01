@@ -138,14 +138,16 @@
     9. Se puede crear una bd sin el helper e incluirla en la app?
     
 31. [Curso Android desde cero #31 | Base de datos – Consultas (SQLite) en Android](https://www.youtube.com/watch?v=TxkdWX3UaNk)
-    1. `public void Buscar(View oView)` 
+    1. `public void buscar(View oView)` 
     2. `oDb = new ComponentDB(this,"db_framework",null,1);`
     3. `SQLiteDatabase oDbRW = oDb.getWritableDatabase();`
     4. `Cursor oCursor = oDbRW.rawQuery(sSQL,null);`
     5. `oCursor.close()`
 
 32. [Curso Android desde cero #32 | Base de datos – Bajas (SQLite) en Android](https://www.youtube.com/watch?v=C7A9ULyBX5Y)    
-    1. 
+    1. `public void borrar(View oView){`
+    2. `int iCantidad = oDbRW.delete("articulos","codigo="+sCodigo,null);`
+    3
        
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`

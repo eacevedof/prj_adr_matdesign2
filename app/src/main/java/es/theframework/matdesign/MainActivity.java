@@ -102,6 +102,31 @@ public class MainActivity extends AppCompatActivity
         }
     }//buscar
 
+    //https://www.youtube.com/watch?v=C7A9ULyBX5Y
+    public void borrar(View oView){
+        oDb = new ComponentDB(this,"db_framework",null,1);
+        SQLiteDatabase oDbRW = oDb.getWritableDatabase();
+        String sCodigo = edtCodigo.getText().toString();
+        if(sCodigo.isEmpty())
+        {
+            int iCantidad = oDbRW.delete("articulos","codigo="+sCodigo,null);
+            if(iCantidad==1)
+            {
+                alert("Se han eliminado "+String.valueOf(iCantidad));
+                edtPrecio.setText("");
+                edtCodigo.setText("");
+                edtDescripcion.setText("");
+            }
+            else
+                alert("El artículo "+sCodigo+" no existe!")
+        }
+        else
+        {
+            alert("El campo Codigo está vacio");
+        }
+        oDbRW.close();
+    }//borrar
+
     protected boolean is_numeric(String sString)
     {
         return sString != null && sString.matches("[-+]?\\d*\\.?\\d+");
