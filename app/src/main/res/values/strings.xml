@@ -10,4 +10,12 @@
     <string name="but.calcular.hint">Calcular</string>
     <string name="tvw.resultado.text">Resultado</string>
     <string name="tvw.one.text">Seleccione un item</string>
+
+    <string name="edt.codigo.hint">Código</string>
+    <string name="edt.descripcion.hint">Descripción</string>
+    <string name="edt.precio.hint">Precio</string>
+    <string name="but.buscar.text">Buscar</string>
+    <string name="but.insertar.text">Insertar</string>
+    <string name="but.modificar.text">Modificar</string>
+    <string name="but.borrar.text">Borrar</string>
 </resources>

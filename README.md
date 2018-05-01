@@ -126,19 +126,28 @@
 
 30. [Curso Android desde cero #30 | Base de datos - Altas (SQLite) en Android](https://www.youtube.com/watch?v=TxkdWX3UaNk)
     1. `android.database.sqlite.SQLiteOpenHelper` CLASE para conectar con sqlite
-        1.[Heredando de SQLiteOpenHelper](https://youtu.be/TxkdWX3UaNk?t=341)
+        1. [Heredando de SQLiteOpenHelper](https://youtu.be/TxkdWX3UaNk?t=341)
     2. Hay que crear una clase que conecta heredando de la clase anterior. Por ejemplo: `class AdminSQLiteOpenHelper`
     3. La clase hija se debe crear como Java Class en java/<paquete-generado-por-la-app/
     4. Despues de escribir la clase al lado de extends presionamos alt+enter, a continuacion seleccionaremos implementar methods
     5. Esto generara 2 metodos: [`onCreate(oSqliteDatabase):void y onUpgrade(oSqliteDatabase):int`](https://youtu.be/TxkdWX3UaNk?t=384)
-    6. Continua con error. Esto es pq tambien hay que heredadr el constructor. ctrl+enter Create constructor match super
+        1. [`onCreate()`](https://youtu.be/TxkdWX3UaNk?t=494)
+    6. Continua con error. Esto es pq tambien hay que heredar el constructor. ctrl+enter Create constructor match super
     7. Hay que seleccionar el constructor con 4 parámetros.
     8. Donde se guarda la bd sqlite?
     9. Se puede crear una bd sin el helper e incluirla en la app?
     
-31. [Conexion sqlite]()
-    1.       
+31. [Curso Android desde cero #31 | Base de datos – Consultas (SQLite) en Android](https://www.youtube.com/watch?v=TxkdWX3UaNk)
+    1. `public void Buscar(View oView)` 
+    
+       
 ### Notas
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
+    
+- `strings.xml`
+    - `edt.codigo.hint`
+    - `rdb.4.text`
+    - `tvw.resultado.text`
+    - `but.modificar.text`
     
