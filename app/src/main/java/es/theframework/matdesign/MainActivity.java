@@ -1,5 +1,7 @@
 package es.theframework.matdesign;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +47,32 @@ public class MainActivity extends AppCompatActivity
         edtDescripcion = (EditText)findViewById(R.id.edtDescription);
     }//load_fromview
 
+    public void registrar(View oView)
+    {
+        oDb = new ComponentDB(this,"db_framework",null,1);
+        SQLiteDatabase oDbRW = oDb.getWritableDatabase();
+
+        String sCodigo = edtCodigo.getText().toString();
+        String sDescripcion = edtDescripcion.getText().toString();
+        String sPrecio = edtPrecio.getText().toString();
+
+        if(!sCodigo.isEmpty() && !sDescripcion.isEmpty() && !sPrecio.isEmpty()) {
+            ContentValues oContVal = new ContentValues();
+            oContVal.put("codigo",sCodigo);
+            oContVal.put("precio",sPrecio);
+            oContVal.put("descripcion",sDescripcion);
+
+            oDbRW.insert("articulos",null,oContVal);
+            oDbRW.close();
+            edtCodigo.setText("");
+            edtDescripcion.setText("");
+            edtPrecio.setText("");
+            Toast.makeText(this, "Registro insertado", Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(this, "Debes llenar todos los campos", Toast.LENGTH_LONG).show();
+        }
+    }//registrar
 
     protected boolean is_numeric(String sString)
     {

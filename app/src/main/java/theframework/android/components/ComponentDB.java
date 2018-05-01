@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 //https://youtu.be/TxkdWX3UaNk?t=272
 public class ComponentDB extends SQLiteOpenHelper{
 
-    public ComponentDB(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public ComponentDB(Context oContext, String sName, SQLiteDatabase.CursorFactory oFactory, int iVersion) {
+        super(oContext, sName, oFactory, iVersion);
     }
 
     @Override
