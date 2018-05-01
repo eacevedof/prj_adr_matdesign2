@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <EditText
-        android:id="@+id/edtNombre"
+        android:id="@+id/edtDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -53,7 +53,7 @@
         tools:layout_editor_absoluteY="287dp" />
 
     <Button
-        android:id="@+id/butActualizar"
+        android:id="@+id/butModificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/but.modificar.text"

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,38 +15,35 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import theframework.android.components.ComponentUtils;
+import theframework.android.components.ComponentDB;
 
-//Curso Android desde cero #14 | Parte lógica de los controles RadioGroup y RadioButton
-//https://www.youtube.com/watch?v=aI5FCr85fOc
+//[Curso Android desde cero #30 | Base de datos - Altas (SQLite) en Android](https://youtu.be/TxkdWX3UaNk?t=706)
 public class MainActivity extends AppCompatActivity
 {
+    private ComponentDB oDb;
     private ComponentUtils oUtils;
-    private TextView tvwOne;
-    private ListView lvwOne;
 
-    private String arNombres[] = {"Samuel","Valentina","Santiago","Alejandro","Valeria","Benjamin",
-                                    "Gerardo","Carlos","David","Sofia"};
-    private String arEdades[] = {"18","25","32","17","24","20","27","15","19","23"};
+    private EditText edtPrecio,edtDescripcion,edtCodigo;
+    private Button butBuscar, butInsertar, butModificar, butBorrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        alert("onCreate");
-        tvwOne = (TextView)findViewById(R.id.tvwOne);
-        lvwOne = (ListView)findViewById(R.id.lvwOne);
-
-        ArrayAdapter<String> oAdapter = new ArrayAdapter<String>(this,R.layout.list_item_geekpedia,arNombres);
-        lvwOne.setAdapter(oAdapter);
-        lvwOne.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                tvwOne.setText("La edad de ".concat(lvwOne.getItemAtPosition(position).toString()).concat(" es ").concat(arEdades[position]).concat(" años"));
-            }
-        });
-        //double g = ComponentUtils.get_round(3);
+        load_fromview();
     }//onCreate
+
+    protected void load_fromview()
+    {
+        butBuscar = (Button)findViewById(R.id.butBuscar);
+        butInsertar = (Button)findViewById(R.id.butInsertar);
+        butModificar = (Button)findViewById(R.id.butModificar);
+        butBorrar = (Button)findViewById(R.id.butBorrar);
+
+        edtCodigo = (EditText)findViewById(R.id.edtCodigo);
+        edtPrecio = (EditText)findViewById(R.id.edtPrecio);
+        edtDescripcion = (EditText)findViewById(R.id.edtDescription);
+    }//load_fromview
 
 
     protected boolean is_numeric(String sString)
