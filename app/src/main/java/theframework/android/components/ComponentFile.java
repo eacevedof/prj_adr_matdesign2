@@ -26,12 +26,13 @@ public class ComponentFile {
     private ArrayList<String> arErrors;
     private Boolean isError;
 
-    public void ComponentFile(Context oContext){
+    public ComponentFile(Context oContext){
         log("ComponentFile.constructor");
         isError = false;
         arErrors = new ArrayList<String>();
         this.oContext = oContext;
     }//ComponentFile
+
 
     //https://stackoverflow.com/questions/20369782/write-file-to-sdcard-in-android
     private void mkdir_generic(String sPathBase,String sFolder)
@@ -80,10 +81,17 @@ public class ComponentFile {
             boolean isCreated = oFile.mkdirs();
             if(isCreated) {
                 String sAppPath = "";
+                try {
+                    sAppPath = get_app_path(oContext);
+                    log("sAppPath:"+sAppPath);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
                 log("folder " +sAppPath+"/"+ sFolder + " created in ");
             }
             else
-                ;//add_error("folder "+sFolder+" not created!");
+                add_error("folder "+sFolder+" not created!");
         }
         else
             log("Folder "+sFolder+" exists","mkdir_app");
@@ -148,9 +156,9 @@ public class ComponentFile {
     public boolean is_error(){return isError;}
     public String get_errors(){return arErrors.toString();}
 
-    protected void log(String sValue){Log.d("[**DEBUG LOGMETHOD**]:",sValue);}
-    protected void log(String sValue,String sTitle){Log.d(sTitle,sValue);}
-    protected void log(Object oValue,String sTitle){Log.d(sTitle,oValue.toString());}
+    protected void log(String sValue){Log.d("[**APP**]:",sValue);}
+    protected void log(String sValue,String sTitle){Log.d("[**APP**]:"+sTitle,sValue);}
+    protected void log(Object oValue,String sTitle){Log.d("[**APP**]:"+sTitle,oValue.toString());}
 
 }//ComponentFile
 
