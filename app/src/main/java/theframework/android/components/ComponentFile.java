@@ -32,22 +32,24 @@ public class ComponentFile {
     }//ComponentFile
 
     //https://stackoverflow.com/questions/20369782/write-file-to-sdcard-in-android
-    public void mkdir(String sPath)
+    public void mkdir(String sFolder)
     {
         try{
             //ej: /storage/emulated/0
             String sPathBase = Environment.getExternalStorageDirectory().getAbsolutePath();
             sPathBase = Environment.getExternalStorageDirectory().toString();
             log(sPathBase,"sPathBase");
-            File oFile = new File(sPathBase,sPath);
+            File oFile = new File(sPathBase,sFolder);
             if(!oFile.exists())
             {
                 boolean isCreated = oFile.mkdir();
                 if(!isCreated)
-                    add_error("Folder "+sPath+" not created","ComponentFile.mkdir");
+                    add_error("Folder "+sFolder+" not created","ComponentFile.mkdir");
                 else
-                    log("Folder created "+sPath,"ComponentFile.mkdir");
+                    log("Folder created "+sFolder,"ComponentFile.mkdir");
             }
+            else
+                log("Folder exists in:"+sPathBase+"/"+sFolder);
         }
         catch (Exception oEx)
         {
