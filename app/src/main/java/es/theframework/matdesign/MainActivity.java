@@ -19,10 +19,12 @@ import java.math.RoundingMode;
 
 import theframework.android.components.ComponentUtils;
 import theframework.android.components.ComponentDB;
+import theframework.android.components.ComponentFile;
 
 //[Curso Android desde cero #30 | Base de datos - Altas (SQLite) en Android](https://youtu.be/TxkdWX3UaNk?t=706)
 public class MainActivity extends AppCompatActivity
 {
+    private ComponentFile oFile;
     private ComponentDB oDb;
     private ComponentUtils oUtils;
 
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        oFile = new ComponentFile();
+        oFile.mkdir("nueva_carpeta");
         load_fromview();
     }//onCreate
 
