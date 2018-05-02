@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity
         oDb = new ComponentDB(this,"db_framework",null,1);
         SQLiteDatabase oDbRW = oDb.getWritableDatabase();
         String sCodigo = edtCodigo.getText().toString();
-        if(sCodigo.isEmpty())
+        if(!sCodigo.isEmpty())
         {
             int iCantidad = oDbRW.delete("articulos","codigo="+sCodigo,null);
             if(iCantidad==1)
