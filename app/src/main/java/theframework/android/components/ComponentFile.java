@@ -26,7 +26,6 @@ public class ComponentFile {
     private ArrayList<String> arErrors;
     private Boolean isError;
 
-
     public void ComponentFile(Context oContext){
         log("ComponentFile.constructor");
         isError = false;
@@ -81,16 +80,10 @@ public class ComponentFile {
             boolean isCreated = oFile.mkdirs();
             if(isCreated) {
                 String sAppPath = "";
-                try {
-                     sAppPath = get_app_path(oContext);
-                     log("sAppPath:"+sAppPath);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
                 log("folder " +sAppPath+"/"+ sFolder + " created in ");
             }
             else
-                add_error("folder "+sFolder+" not created!");
+                ;//add_error("folder "+sFolder+" not created!");
         }
         else
             log("Folder "+sFolder+" exists","mkdir_app");
