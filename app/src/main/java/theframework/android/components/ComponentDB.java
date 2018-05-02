@@ -12,6 +12,7 @@ import static android.widget.Toast.*;
 //https://youtu.be/TxkdWX3UaNk?t=272
 public class ComponentDB extends SQLiteOpenHelper{
 
+    //la otra clase es: SQLiteDatabase
     public ComponentDB(Context oContext, String sName, SQLiteDatabase.CursorFactory oFactory, int iVersion) {
         super(oContext, sName, oFactory, iVersion);
     }
