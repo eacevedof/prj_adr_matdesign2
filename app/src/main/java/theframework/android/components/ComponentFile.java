@@ -20,7 +20,6 @@ public class ComponentFile {
 
     private Context oContext;
     private String sType;
-    private String sFathFolder;
     private String sName;
 
     private ArrayList<String> arErrors;
@@ -33,34 +32,34 @@ public class ComponentFile {
         this.oContext = oContext;
     }//ComponentFile
 
-
     //https://stackoverflow.com/questions/20369782/write-file-to-sdcard-in-android
     private void mkdir_generic(String sPathBase,String sFolder)
     {
+        log("sPathBase:"+sPathBase+",sFolder:"+sFolder,"mkdir_generic");
         try{
             if(!sPathBase.isEmpty())
             {
-                log(sPathBase, "sPathBase");
+                log("sPathBase:"+sPathBase, "ComponentFile.mkdir_generic");
                 File oFile = new File(sPathBase, sFolder);
                 if (!oFile.exists()) {
                     boolean isCreated = oFile.mkdir();
                     if (!isCreated)
-                        add_error("Folder " + sFolder + " not created", "ComponentFile.mkdir");
+                        add_error("Folder " + sFolder + " not created", "ComponentFile.mkdir_generic");
                     else
-                        log("Folder created " + sFolder, "ComponentFile.mkdir");
+                        log("Folder created " + sFolder, "ComponentFile.mkdir_generic");
                 } else
-                    log("Folder exists in:" + sPathBase + "/" + sFolder);
+                    log("Folder exists in:" + sPathBase + "/" + sFolder,"ComponentFile.mkdir_generic");
             }
             else
             {
-                log("PathBase is empty");
+                log("PathBase is empty","ComponentFile.mkdir_generic");
                 add_error("Patbase is empty");
             }
         }
         catch (Exception oEx)
         {
-            add_error(oEx.getMessage(),"ComponentFile.mkdir");
-            log(oEx.getMessage(),"ComponentFile.mkdir.exeption");
+            add_error(oEx.getMessage(),"ComponentFile.mkdir_generic");
+            log(oEx.getMessage(),"ComponentFile.mkdir_generic.exeption");
         }
     }//mkdir_generic
 
@@ -76,26 +75,23 @@ public class ComponentFile {
     {
         //context.getDir("mydir", ...); This creates your.package/app_mydir/
         File oFile = oContext.getDir(sFolder, Context.MODE_PRIVATE);  //Don't do
-        if(!oFile.exists())
+        if(oFile.exists())
         {
-            boolean isCreated = oFile.mkdirs();
-            if(isCreated) {
-                String sAppPath = "";
-                try {
-                    sAppPath = get_app_path(oContext);
-                    log("sAppPath:"+sAppPath);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                log("folder " +sAppPath+"/"+ sFolder + " created in ");
+            String sAppPath = "";
+            try {
+                sAppPath = get_app_path(oContext);
+                log("sAppPath:"+sAppPath,"mkdir_app");
             }
-            else
-                add_error("folder "+sFolder+" not created!");
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+            log("folder "+ sFolder + " created in "+sAppPath,"mkdir_app");
         }
+        //si no existe, es que no se ha podido crear
         else
             log("Folder "+sFolder+" exists","mkdir_app");
     }//mkdir_app
+
 
     private String get_app_path(Context oContext) throws Exception
     {
