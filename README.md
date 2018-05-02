@@ -170,5 +170,9 @@
 - Estaba dando un error de excepcion el el metodo buscar. Era pq la bd estaba mal creada
   he tenido que eliminarla fisicamente a traves del `Device File Explorer`, desinstalando la app y
   borrando el archivo `db_framework`
-    
+  
+- Cuando se crea una carpeta con `File oFile = new File(sPathBase,sFolder)` 
+se crea en `/sdcard/<nueva_carpeta>`
+    - Creo que para esto es necesario habilitar permisos de escritura en la instalación
+    - Para permitir la escritura es necesario entrar en el dispositivo `settings->app permissions->myapp->sotrage=on`
     
