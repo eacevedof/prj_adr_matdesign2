@@ -132,6 +132,9 @@
     4. Despues de escribir la clase al lado de extends presionamos alt+enter, a continuacion seleccionaremos implementar methods
     5. Esto generara 2 metodos: [`onCreate(oSqliteDatabase):void y onUpgrade(oSqliteDatabase):int`](https://youtu.be/TxkdWX3UaNk?t=384)
         1. [`onCreate()`](https://youtu.be/TxkdWX3UaNk?t=494)
+        2. Ruta de la base de datos: `/data/data/<your_package_name>/databases`
+        3. [Ruta en el emulador - stackoverflow](https://stackoverflow.com/questions/1510840/where-does-android-emulator-store-sqlite-database) 
+        4. Android Studio: `View->Tools Windows->Device File Explorer + <la ruta anterior>`
     6. Continua con error. Esto es pq tambien hay que heredar el constructor. ctrl+enter Create constructor match super
     7. Hay que seleccionar el constructor con 4 parámetros.
     8. Donde se guarda la bd sqlite?
