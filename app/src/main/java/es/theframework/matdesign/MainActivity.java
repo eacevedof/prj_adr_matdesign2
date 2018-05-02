@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         oFile = new ComponentFile();
-        oFile.mkdir("nueva_carpeta");
+        oFile.mkdir_sd("nueva_carpeta1");
+        oFile.mkdir_app("otra_carpeta1",this);
         load_fromview();
     }//onCreate
 
