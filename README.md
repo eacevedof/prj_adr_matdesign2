@@ -166,6 +166,7 @@
     - `rdb.4.text`
     - `tvw.resultado.text`
     - `but.modificar.text`
+    
 - Estaba dando un error de excepcion el el metodo buscar. Era pq la bd estaba mal creada
   he tenido que eliminarla fisicamente a traves del `Device File Explorer`, desinstalando la app y
   borrando el archivo `db_framework`
