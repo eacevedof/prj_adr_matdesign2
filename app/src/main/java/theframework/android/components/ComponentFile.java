@@ -41,10 +41,13 @@ public class ComponentFile {
             {
                 log("sPathBase:"+sPathBase, "ComponentFile.mkdir_generic");
                 File oFile = new File(sPathBase, sFolder);
+                //http://eagle.phys.utk.edu/guidry/android/writeSD.html
                 if (!oFile.exists()) {
                     boolean isCreated = oFile.mkdir();
-                    if (!isCreated)
+                    if (!isCreated) {
+                        log("Folder "+sFolder+" not created","ComponentFile.mkdir_generic");
                         add_error("Folder " + sFolder + " not created", "ComponentFile.mkdir_generic");
+                    }
                     else
                         log("Folder created " + sFolder, "ComponentFile.mkdir_generic");
                 } else
