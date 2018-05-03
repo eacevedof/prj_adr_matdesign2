@@ -18,4 +18,5 @@
     <string name="but.insertar.text">Insertar</string>
     <string name="but.modificar.text">Modificar</string>
     <string name="but.borrar.text">Borrar</string>
+    <string name="title_activity_material_design">MaterialDesign</string>
 </resources>
