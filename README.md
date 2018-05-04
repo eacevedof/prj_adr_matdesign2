@@ -177,11 +177,21 @@ se crea en `/sdcard/<nueva_carpeta>`
     - Para permitir la escritura es necesario entrar en el dispositivo `settings->app permissions->myapp->sotrage=on`
     
 - Despues de crear una actividad `MaterialDesign` ha empezado a dar error en Gradle.
-
-era
+  Era:
 ```
 implementation 'com.android.support:design:27.0.2'
 implementation 'com.android.support:design:27.1.1' nuevo
 ```
 Se mostraba lo siguiente:`Error program type already present android support design widget coordinator..`
 Puede que tenga que ver más con la creacion de la nueva actividad que con la actualizacion de Android Studio
+
+```bash
+Enviroment.DIRECTORY_DOCUMENTS                          ->  Documents
+this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)-> /storage/emulated/0/Android/data/es.theframework.matdesign/files/Documents
+Environment.getExternalStorageDirectory().toString()    ->  /storage/emulated/0
+Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) -> /storage/emulated/0/DCIM
+Context.getExternalMediaDirs().toString()               ->  [Ljava.io.File;@84f7dd2
+this.getFilesDir().toString()                           -> /data/user/0/es.theframework.matdesign/files
+
+
+```

@@ -14,6 +14,7 @@ public class Pruebas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pruebas);
+        checkExternalMedia();
         paths();
     }//onCreate
 
@@ -23,7 +24,8 @@ public class Pruebas extends AppCompatActivity {
         Log.d("Enviroment.DIRECTORY_DOCUMENTS",Environment.DIRECTORY_DOCUMENTS);
         ///storage/emulated/0
         Log.d("Enviroment.getExternalStorageDirectory",Environment.getExternalStorageDirectory().toString());
-        //Log.d("Enviroment.getExternalMediaDirs()",Enviroment.getExternalMediaDirs().toString())
+
+        Log.d("context.getExternalMediaDirs()",this.getExternalMediaDirs().toString());
         File oFileDir = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
         //storage/emulated/0/Android/data/es.theframework.matdesign/files/Documents
         Log.d("oFileDir.toString",oFileDir.toString());
@@ -36,6 +38,11 @@ public class Pruebas extends AppCompatActivity {
         ///storage/emulated/0/Android/data/es.theframework.matdesign/files/Documents/aaaa
         File oFile = new File(oFileDir, "myData.txt");
         Log.d("oFile.mydata.txt",oFile.toString());
+    }
+
+    private void mkdir()
+    {
+
     }
 
     private void checkExternalMedia() {
