@@ -198,3 +198,4 @@ this.getFilesDir().toString()                           -> /data/user/0/es.thefr
 
 ```
 - [Comprobar permisos sobre la sdcard](https://stackoverflow.com/questions/33162152/storage-permission-error-in-marshmallow)
+    - En el dispositivo, settings, la-app, permissions, activar el permiso
