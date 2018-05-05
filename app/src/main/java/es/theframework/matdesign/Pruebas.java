@@ -4,6 +4,7 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -21,11 +22,13 @@ public class Pruebas extends AppCompatActivity {
 
     private void mkdir_sdcard()
     {
-        String sPathFolder = this.getExternalFilesDir("aguamala").toString();
+        //String sPathFolder = this.getExternalFilesDir("aguamala").toString();
+        String sPathFolder = Environment.getExternalStorageDirectory().getAbsolutePath()+"/aguaxxx";
         File oFolder = new File(sPathFolder);
         boolean isCreated = oFolder.mkdir();
-        Log.d("mkdir_sdcard",sPathFolder);
-        Log.d("mkdir_sdcard",String.valueOf(isCreated));
+        Log.d("mkdir_sdcard 1",sPathFolder);
+        Log.d("mkdir_sdcard 2",String.valueOf(isCreated));
+        alert("mkdir_sdcard "+String.valueOf(isCreated));
     }
 
     private void mkdir_prv()
@@ -83,4 +86,9 @@ public class Pruebas extends AppCompatActivity {
         Log.d("root",root.toString());
     }
 
+    protected void alert(String sText)
+    {
+        String sMsg = "[PRUEBAS]".concat(sText);
+        Toast.makeText(this,sMsg,Toast.LENGTH_LONG).show();
+    }//log
 }//Pruebas
