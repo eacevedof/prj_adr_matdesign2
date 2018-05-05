@@ -18,9 +18,9 @@ public class Pruebas extends AppCompatActivity {
         setContentView(R.layout.activity_pruebas);
         checkExternalMedia();
         //paths();
-        //mkdir_sdcard();
+        mkdir_sdcard();
         //mkdir_sdcard2();
-        mkdir_sdcard3();
+        //mkdir_sdcard3();
     }//onCreate
 
     private void mkdir_sdcard()
@@ -28,8 +28,8 @@ public class Pruebas extends AppCompatActivity {
         alert("mkdir_sdcard");
         //esta ha funcionado, creando en: /sdcard/Android/data/<app-folder>/files/<la-carpeta>
         //es equivalente a:/storage/emulated/0/Android/data/es.theframework.matdesign/files/agua123
-        String sPathFolder = this.getExternalFilesDir("ppe").toString();
-        //String sPathFolder = Environment.getExternalStorageDirectory().getAbsolutePath()+"/aguaxxx";
+        //String sPathFolder = this.getExternalFilesDir("ppe").toString();
+        String sPathFolder = Environment.getExternalStorageDirectory().getAbsolutePath()+"/aguaxxx";
         //String sPathFolder = Environment.getExternalStorageDirectory()+"/aguaxxx";
         File oFolder = new File(sPathFolder);
         boolean isCreated = oFolder.mkdir();
