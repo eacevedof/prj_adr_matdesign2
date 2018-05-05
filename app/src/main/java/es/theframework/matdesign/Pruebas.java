@@ -1,5 +1,6 @@
 package es.theframework.matdesign;
 
+import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +18,9 @@ public class Pruebas extends AppCompatActivity {
         setContentView(R.layout.activity_pruebas);
         checkExternalMedia();
         //paths();
-        mkdir_sdcard2();
+        //mkdir_sdcard();
+        //mkdir_sdcard2();
+        mkdir_sdcard3();
     }//onCreate
 
     private void mkdir_sdcard()
@@ -33,8 +36,60 @@ public class Pruebas extends AppCompatActivity {
         Log.d("mkdir_sdcard 1",String.valueOf(isCreated));
         if(oFolder.isDirectory())
             Log.d("mkdir_sdcard 2","dir created");
+    }
 
-        Log.d("mkdir_sdcard 3",sPathFolder);
+    private void mkdir_sdcard3()
+    {
+        File oFile;
+        Log.d("mkdir_sdcard3","calling getAlbumStorageDir");
+        if(has_app_storage_perm()) {
+            if (isExternalStorageReadable())
+                Log.d("mkdir_sdcard3", "readable");
+            if (isExternalStorageWritable())
+                oFile = getAlbumStorageDir("mi-album");
+            else
+                Log.e("mkdir_sdcard3", "sdcard no writable");
+        }
+        else
+            Log.e("mkdir_sdcard3","storage perm not enabled");
+    }//mkdir_sdcard3
+
+    public boolean has_app_storage_perm()
+    {
+        if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            Log.v("has_app_storage_perm","Permission is granted");
+            //File write logic here
+            return true;
+        }
+        return false;
+    }
+    public boolean isExternalStorageWritable() {
+        String state = Environment.getExternalStorageState();
+        Log.d("isExternalStorageWritable.state",state);
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isExternalStorageReadable() {
+        String state = Environment.getExternalStorageState();
+        Log.d("isExternalStorageReadable.state",state);
+        if (Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
+    public File getAlbumStorageDir(String albumName) {
+        // Get the directory for the user's public pictures directory.
+        File file = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES), albumName);
+        if (!file.mkdirs()) {
+            Log.e("getAlbumStorageDir", "Directory not created");
+        }
+        return file;
     }
 
     private void mkdir_sdcard2()
