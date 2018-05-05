@@ -22,13 +22,21 @@ public class Pruebas extends AppCompatActivity {
 
     private void mkdir_sdcard()
     {
-        //String sPathFolder = this.getExternalFilesDir("aguamala").toString();
-        String sPathFolder = Environment.getExternalStorageDirectory().getAbsolutePath()+"/aguaxxx";
+        alert("mkdir_sdcard");
+        //esta ha funcionado, creando en: /sdcard/Android/data/<app-folder>/files/<la-carpeta>
+        //es equivalente a:/storage/emulated/0/Android/data/es.theframework.matdesign/files/agua123
+        String sPathFolder = this.getExternalFilesDir("agua_aco").toString();
+        //String sPathFolder = Environment.getExternalStorageDirectory().getAbsolutePath()+"/aguaxxx";
+        //String sPathFolder = Environment.getExternalStorageDirectory()+"/aguaxxx";
         File oFolder = new File(sPathFolder);
         boolean isCreated = oFolder.mkdir();
+        alert(" - isCreated "+String.valueOf(isCreated));
+        if(oFolder.isDirectory())
+            alert(" - directory created");
+
         Log.d("mkdir_sdcard 1",sPathFolder);
         Log.d("mkdir_sdcard 2",String.valueOf(isCreated));
-        alert("mkdir_sdcard "+String.valueOf(isCreated));
+
     }
 
     private void mkdir_prv()
@@ -88,7 +96,7 @@ public class Pruebas extends AppCompatActivity {
 
     protected void alert(String sText)
     {
-        String sMsg = "[PRUEBAS]".concat(sText);
+        String sMsg = "[PRUEBAS] :".concat(sText);
         Toast.makeText(this,sMsg,Toast.LENGTH_LONG).show();
     }//log
 }//Pruebas
