@@ -15,8 +15,23 @@ public class Pruebas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pruebas);
         checkExternalMedia();
-        paths();
+        //paths();
+        mkdir_sdcard();
     }//onCreate
+
+    private void mkdir_sdcard()
+    {
+        String sPathFolder = this.getExternalFilesDir("aguamala").toString();
+        File oFolder = new File(sPathFolder);
+        boolean isCreated = oFolder.mkdir();
+        Log.d("mkdir_sdcard",sPathFolder);
+        Log.d("mkdir_sdcard",String.valueOf(isCreated));
+    }
+
+    private void mkdir_prv()
+    {
+
+    }
 
     protected void paths()
     {
@@ -38,11 +53,6 @@ public class Pruebas extends AppCompatActivity {
         ///storage/emulated/0/Android/data/es.theframework.matdesign/files/Documents/aaaa
         File oFile = new File(oFileDir, "myData.txt");
         Log.d("oFile.mydata.txt",oFile.toString());
-    }
-
-    private void mkdir()
-    {
-
     }
 
     private void checkExternalMedia() {
