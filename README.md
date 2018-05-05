@@ -157,6 +157,8 @@
     2. `int iCantidad = oDbRW.update("articulos",oContVal,"codigo="+sCodigo,null);`
        
 ### Notas
+- Version de la app: API 24: Android 7.0 (Nougat)
+
 - `Emulator: FB: openColorBuffer cb handle 0x2d5 not found`
     - No he encontrado solución para esto
     

@@ -17,7 +17,7 @@ public class Pruebas extends AppCompatActivity {
         setContentView(R.layout.activity_pruebas);
         checkExternalMedia();
         //paths();
-        mkdir_sdcard();
+        mkdir_sdcard2();
     }//onCreate
 
     private void mkdir_sdcard()
@@ -25,19 +25,32 @@ public class Pruebas extends AppCompatActivity {
         alert("mkdir_sdcard");
         //esta ha funcionado, creando en: /sdcard/Android/data/<app-folder>/files/<la-carpeta>
         //es equivalente a:/storage/emulated/0/Android/data/es.theframework.matdesign/files/agua123
-        String sPathFolder = this.getExternalFilesDir("agua_aco").toString();
+        String sPathFolder = this.getExternalFilesDir("ppe").toString();
         //String sPathFolder = Environment.getExternalStorageDirectory().getAbsolutePath()+"/aguaxxx";
         //String sPathFolder = Environment.getExternalStorageDirectory()+"/aguaxxx";
         File oFolder = new File(sPathFolder);
         boolean isCreated = oFolder.mkdir();
-        alert(" - isCreated "+String.valueOf(isCreated));
+        Log.d("mkdir_sdcard 1",String.valueOf(isCreated));
         if(oFolder.isDirectory())
-            alert(" - directory created");
+            Log.d("mkdir_sdcard 2","dir created");
 
-        Log.d("mkdir_sdcard 1",sPathFolder);
-        Log.d("mkdir_sdcard 2",String.valueOf(isCreated));
-
+        Log.d("mkdir_sdcard 3",sPathFolder);
     }
+
+    private void mkdir_sdcard2()
+    {
+        alert("mkdir_sdcard2");
+        String sPathFolder = "/storage/emulated/0/vaya";
+        sPathFolder = "/aaa_bbb";
+        File oFolder = new File(sPathFolder);
+        boolean isCreated = oFolder.mkdir();
+        Log.d("mkdir_sdcard2 1",String.valueOf(isCreated));
+        if(oFolder.isDirectory())
+            Log.d("mkdir_sdcard2 2","dir created");
+
+        Log.d("mkdir_sdcard2 3",sPathFolder);
+    }
+
 
     private void mkdir_prv()
     {

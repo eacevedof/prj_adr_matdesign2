@@ -12,7 +12,8 @@ public class ComponentUtils
 {
     public Application oAdrapp;
 
-    public ComponentUtils() {;}
+    public ComponentUtils() {
+    }
 
     public ComponentUtils(Application oAdrapp)
     {
