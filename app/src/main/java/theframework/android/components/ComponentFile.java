@@ -99,28 +99,41 @@ public class ComponentFile {
         else
             add_error("Check sdcard app permission");
         return false;
-    }//mkdir_sdcard
+    }//mkdir_sdcard1
 
-    public void mkdir_app(String sFolder,Context oContext)
+    //internal storage
+    public boolean mkdir_app(String sFolder)
     {
-        //context.getDir("mydir", ...); This creates your.package/app_mydir/
-        File oFile = oContext.getDir(sFolder, Context.MODE_PRIVATE);  //Don't do
-        if(oFile.exists())
-        {
-            String sAppPath = "";
-            try {
-                sAppPath = get_app_path(oContext);
-                log("sAppPath:"+sAppPath,"mkdir_app");
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
-            log("folder "+ sFolder + " created in "+sAppPath,"mkdir_app");
-        }
-        //si no existe, es que no se ha podido crear
+        File oFile = new File(oContext.getFilesDir(),sFolder);
+        if(oFile.isDirectory())
+            add_error("Folder: "+sFolder+" already exists");
         else
-            log("Folder "+sFolder+" exists","mkdir_app");
-    }//mkdir_app
+        {
+            boolean isCreated = oFile.mkdir();
+            if(isCreated)
+                return true;
+            else
+                add_error("Folder: "+sFolder+" not created");
+        }
+        return false;
+    }//mkdir_app1
+
+    //internal storage
+    public boolean mkdir_app(String sFolder,Context oContext)
+    {
+        File oFile = new File(oContext.getFilesDir(),sFolder);
+        if(oFile.isDirectory())
+            add_error("Folder: "+sFolder+" already exists");
+        else
+        {
+            boolean isCreated = oFile.mkdir();
+            if(isCreated)
+                return true;
+            else
+                add_error("Folder: "+sFolder+" not created");
+        }
+        return false;
+    }//mkdir_app2
 
     public boolean is_extstore_permitted(Context oContext)
     {
