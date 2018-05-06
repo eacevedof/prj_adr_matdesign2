@@ -14,7 +14,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 /**
- * ComponentFile 1.0.0
+ * ComponentFile 1.1.0
  */
 public class ComponentFile {
 
@@ -31,48 +31,6 @@ public class ComponentFile {
         arErrors = new ArrayList<String>();
         this.oContext = oContext;
     }//ComponentFile
-
-    //https://stackoverflow.com/questions/20369782/write-file-to-sdcard-in-android
-    private void mkdir_generic(String sPathBase,String sFolder)
-    {
-        log("sPathBase:"+sPathBase+",sFolder:"+sFolder,"mkdir_generic");
-        try{
-            if(!sPathBase.isEmpty())
-            {
-                log("sPathBase:"+sPathBase, "ComponentFile.mkdir_generic");
-                File oFile = new File(sPathBase, sFolder);
-                //http://eagle.phys.utk.edu/guidry/android/writeSD.html
-                if (!oFile.exists()) {
-                    boolean isCreated = oFile.mkdir();
-                    if (!isCreated) {
-                        log("Folder "+sFolder+" not created","ComponentFile.mkdir_generic");
-                        add_error("Folder " + sFolder + " not created", "ComponentFile.mkdir_generic");
-                    }
-                    else
-                        log("Folder created " + sFolder, "ComponentFile.mkdir_generic");
-                } else
-                    log("Folder exists in:" + sPathBase + "/" + sFolder,"ComponentFile.mkdir_generic");
-            }
-            else
-            {
-                log("PathBase is empty","ComponentFile.mkdir_generic");
-                add_error("Patbase is empty");
-            }
-        }
-        catch (Exception oEx)
-        {
-            add_error(oEx.getMessage(),"ComponentFile.mkdir_generic");
-            log(oEx.getMessage(),"ComponentFile.mkdir_generic.exeption");
-        }
-    }//mkdir_generic
-
-    public void mkdir_sd(String sFolder)
-    {
-        //ej: /storage/emulated/0
-        //sPathBase = Environment.getExternalStorageDirectory().getAbsolutePath();
-        String sPathBase = Environment.getExternalStorageDirectory().toString();
-        mkdir_generic(sPathBase,sFolder);
-    }//mkdir0
 
     public boolean mkdir_sdcard(String sFolder)
     {
@@ -135,7 +93,7 @@ public class ComponentFile {
         return false;
     }//mkdir_app2
 
-    public boolean is_extstore_permitted(Context oContext)
+    protected boolean is_extstore_permitted(Context oContext)
     {
         if(oContext.checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
             //File write logic here
@@ -143,14 +101,14 @@ public class ComponentFile {
         return false;
     }//is_extstore_permitted
 
-    public boolean is_extstore_permitted()
+    protected boolean is_extstore_permitted()
     {
         if(oContext.checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
             return true;
         return false;
     }//is_external_permitted
 
-    public boolean is_extstore_writable()
+    protected boolean is_extstore_writable()
     {
         String sState = Environment.getExternalStorageState();
         if(Environment.MEDIA_MOUNTED.equals(sState))
@@ -158,7 +116,7 @@ public class ComponentFile {
         return false;
     }//is_extstore_writable
 
-    public boolean is_extstore_readable() {
+    protected boolean is_extstore_readable() {
         String state = Environment.getExternalStorageState();
         if(Environment.MEDIA_MOUNTED.equals(state) ||
                 Environment.MEDIA_MOUNTED_READ_ONLY.equals(state))
