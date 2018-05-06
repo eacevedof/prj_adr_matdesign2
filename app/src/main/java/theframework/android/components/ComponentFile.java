@@ -95,6 +95,36 @@ public class ComponentFile {
             log("Folder "+sFolder+" exists","mkdir_app");
     }//mkdir_app
 
+    public boolean is_extstore_permitted(Context oContext)
+    {
+        if(oContext.checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
+            //File write logic here
+            return true;
+        return false;
+    }//is_extstore_permitted
+
+    public boolean is_extstore_permitted()
+    {
+        if(oContext.checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
+            return true;
+        return false;
+    }//is_external_permitted
+
+    public boolean is_extstore_writable()
+    {
+        String sState = Environment.getExternalStorageState();
+        if(Environment.MEDIA_MOUNTED.equals(sState))
+            return true;
+        return false;
+    }//is_extstore_writable
+
+    public boolean is_extstore_readable() {
+        String state = Environment.getExternalStorageState();
+        if(Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state))
+            return true;
+        return false;
+    }//is_extstore_readable
 
     private String get_app_path(Context oContext) throws Exception
     {
@@ -104,6 +134,7 @@ public class ComponentFile {
                 .applicationInfo.dataDir.toString();
         return sPath;
     }//get_app_path
+
 
     private void write(String sData,Context oContext) {
         try {
