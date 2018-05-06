@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import java.io.File;
 
+import theframework.android.components.ComponentFile;
+
 //AppCompatActivity: Base class for activities that use the support library action bar features.
 public class Pruebas extends AppCompatActivity {
 
@@ -16,10 +18,17 @@ public class Pruebas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pruebas);
-
+        mkdir();
     }//onCreate
 
-    
+    protected void mkdir()
+    {
+        ComponentFile oCFile = new ComponentFile(this);
+        boolean i = oCFile.mkdir_app("carpeta-interna");
+        if(!i) log(oCFile.get_errors());
+        i = oCFile.mkdir_sdcard("carpeta-externa");
+        if(!i) log(oCFile.get_errors());
+    }
 
     protected void print()
     {
@@ -33,5 +42,11 @@ public class Pruebas extends AppCompatActivity {
     {
         String sMsg = "[PRUEBAS] :".concat(sText);
         Toast.makeText(this,sMsg,Toast.LENGTH_LONG).show();
-    }//log
+    }//alert
+
+    protected void log(String sText)
+    {
+        Log.d("[PRUEBAS]",sText);
+    }
+
 }//Pruebas
