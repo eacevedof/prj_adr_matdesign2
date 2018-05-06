@@ -74,6 +74,33 @@ public class ComponentFile {
         mkdir_generic(sPathBase,sFolder);
     }//mkdir0
 
+    public boolean mkdir_sdcard(String sFolder)
+    {
+        if(is_extstore_permitted())
+        {
+            if(is_extstore_writable()) {
+                String sPathFolder = Environment.getExternalStorageDirectory().getAbsolutePath()
+                        +"/"+sFolder;
+                File oFolder = new File(sPathFolder);
+                if(oFolder.isDirectory())
+                    add_error("Folder: "+sFolder+" already exists");
+                else
+                {
+                    boolean isCreated = oFolder.mkdir();
+                    if(!isCreated)
+                        add_error("Folder: " + sFolder + " , not created!");
+                    else
+                        return true;
+                }
+            }
+            else
+                add_error("Check sdcard writable");
+        }
+        else
+            add_error("Check sdcard app permission");
+        return false;
+    }//mkdir_sdcard
+
     public void mkdir_app(String sFolder,Context oContext)
     {
         //context.getDir("mydir", ...); This creates your.package/app_mydir/
