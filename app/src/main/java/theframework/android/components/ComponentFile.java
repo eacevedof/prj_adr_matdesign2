@@ -211,9 +211,13 @@ public class ComponentFile {
 
         try{
             oFile = new File(new File(sPathDir), sFileName);
-            if(!oFile.exists())
-                oFile.createNewFile();
-            
+            if(!oFile.exists()) {
+                boolean isCreated = oFile.createNewFile();
+                if(!isCreated) {
+                    add_error("File " + sFileName + " not created");
+                    return false;
+                }
+            }
             oStreamOut = new FileOutputStream(oFile, true);
             oStreamW = new OutputStreamWriter(oStreamOut);
             oStreamW.append(sString);
