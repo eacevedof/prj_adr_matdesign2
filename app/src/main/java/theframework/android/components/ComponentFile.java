@@ -151,7 +151,7 @@ public class ComponentFile {
 
     public void write_file(String sData)
     {
-
+        //https://stackoverflow.com/questions/1239026/how-to-create-a-file-in-android
         try {
             // catches IOException below
             final String TESTSTRING = new String("Hello Android");
@@ -201,7 +201,42 @@ public class ComponentFile {
             ioe.printStackTrace();
         }
     }//write_file
-    
+
+    public boolean writeToFile(String directory, String filename, String data ){
+        //https://stackoverflow.com/questions/14872429/append-text-to-the-end-of-the-file
+        File out;
+        OutputStreamWriter outStreamWriter = null;
+        FileOutputStream outStream = null;
+
+        out = new File(new File(directory), filename);
+
+        if ( out.exists() == false ){
+            try {
+                out.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
+            outStream = new FileOutputStream(out, true);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        outStreamWriter = new OutputStreamWriter(outStream);
+
+        try {
+            outStreamWriter.append(data);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            outStreamWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private String read(Context oContext) {
 
         String sResult = "";
