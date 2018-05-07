@@ -187,7 +187,7 @@ public class ComponentFile {
             /* Prepare a char-Array that will
              * hold the chars we read back in. */
             char[] inputBuffer = new char[TESTSTRING.length()];
-            // Fill the Buffer with data from the file
+            // Fill the Buffer with sString from the file
             isr.read(inputBuffer);
             // Transform the chars to a String
             String readString = new String(inputBuffer);
@@ -202,40 +202,30 @@ public class ComponentFile {
         }
     }//write_file
 
-    public boolean writeToFile(String directory, String filename, String data ){
+    public boolean writeToFile(String sPathDir, String sFileName, String sString )
+    {
         //https://stackoverflow.com/questions/14872429/append-text-to-the-end-of-the-file
-        File out;
-        OutputStreamWriter outStreamWriter = null;
-        FileOutputStream outStream = null;
+        File oFile;
+        OutputStreamWriter oStreamW = null;
+        FileOutputStream oStreamOut = null;
 
-        out = new File(new File(directory), filename);
-
-        if ( out.exists() == false ){
-            try {
-                out.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        try{
+            oFile = new File(new File(sPathDir), sFileName);
+            if(!oFile.exists())
+                oFile.createNewFile();
+            
+            oStreamOut = new FileOutputStream(oFile, true);
+            oStreamW = new OutputStreamWriter(oStreamOut);
+            oStreamW.append(sString);
+            oStreamW.flush();
+            return true;
         }
-
-        try {
-            outStream = new FileOutputStream(out, true);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        catch (IOException oEx)
+        {
+            oEx.printStackTrace();
         }
-        outStreamWriter = new OutputStreamWriter(outStream);
-
-        try {
-            outStreamWriter.append(data);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            outStreamWriter.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+        return false;
+    }//writeFile
 
     private String read(Context oContext) {
 
