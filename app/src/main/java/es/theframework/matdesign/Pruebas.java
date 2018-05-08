@@ -40,7 +40,14 @@ public class Pruebas extends AppCompatActivity {
         String sPathSD = Environment.getExternalStorageDirectory().getAbsolutePath().toString();
         sPathSD = sPathSD.concat("/tfw_logs");
         //sPathSD = sPathSD.concat("esto-es-un.log");
-        alert(oFile.get_content(sPathSD,"esto-es-un.log"));
+        String sContent = oFile.get_content(sPathSD,"esto-es-un.log");
+        if(!oFile.is_error()) {
+            alert(sContent);
+            log(sContent);
+            log(oFile.get_errors());
+        }
+        else
+            Log.e("error","ERROR EN oFile.getContent");
     }
 
     protected void writefile()
