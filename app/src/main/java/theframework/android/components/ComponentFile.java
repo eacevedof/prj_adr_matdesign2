@@ -26,6 +26,7 @@ public class ComponentFile {
     private String sType;
     private String sName;
 
+    private ArrayList<String> arWarnings;
     private ArrayList<String> arErrors;
     private Boolean isError;
 
@@ -33,6 +34,7 @@ public class ComponentFile {
         log("ComponentFile.constructor");
         isError = false;
         arErrors = new ArrayList<String>();
+        arWarnings = new ArrayList<String>();
         this.oContext = oContext;
     }//ComponentFile
 
