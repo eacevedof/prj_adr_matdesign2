@@ -1,6 +1,7 @@
 package es.theframework.matdesign;
 
 import android.content.pm.PackageManager;
+import android.icu.util.Calendar;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.Date;
 
 import theframework.android.components.ComponentFile;
 
@@ -18,7 +20,8 @@ public class Pruebas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pruebas);
-        mkdir();
+//        mkdir();
+        writefile();
     }//onCreate
 
     protected void mkdir()
@@ -28,6 +31,20 @@ public class Pruebas extends AppCompatActivity {
         if(!i) log(oCFile.get_errors());
         i = oCFile.mkdir_sdcard("carpeta-externa");
         if(!i) log(oCFile.get_errors());
+    }
+
+    protected void writefile()
+    {
+        ComponentFile oFile = new ComponentFile(this);
+        Date currentTime = Calendar.getInstance().getTime();
+        oFile.mkdir_sdcard("tfw_logs");
+        String sPathSD = Environment.getExternalStorageDirectory().getAbsolutePath().toString();
+        sPathSD = sPathSD.concat("/tfw_logs");
+        log("sPathSD:"+sPathSD);
+        boolean isCreated = oFile.write_file(sPathSD,"esto-es-un.log","some text "+currentTime.toString());
+        log("is_created:"+String.valueOf(isCreated)+",timenow:"+currentTime.toString());
+        alert(oFile.get_errors());
+        log(oFile.get_errors());
     }
 
     protected void print()

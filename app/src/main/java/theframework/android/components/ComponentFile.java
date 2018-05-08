@@ -202,7 +202,7 @@ public class ComponentFile {
         }
     }//write_file
 
-    public boolean writeToFile(String sPathDir, String sFileName, String sString )
+    public boolean write_file(String sPathDir, String sFileName, String sString )
     {
         //https://stackoverflow.com/questions/14872429/append-text-to-the-end-of-the-file
         File oFile;
@@ -229,7 +229,7 @@ public class ComponentFile {
             oEx.printStackTrace();
         }
         return false;
-    }//writeFile
+    }//write_file
 
     private String read(Context oContext) {
 
@@ -269,6 +269,7 @@ public class ComponentFile {
 
     public boolean is_error(){return isError;}
     public String get_errors(){return arErrors.toString();}
+    public void clear_errors(){arErrors = new ArrayList<String>();isError=false;}
 
     protected void log(String sValue){Log.d("[**APP**]:",sValue);}
     protected void log(String sValue,String sTitle){Log.d("[**APP**]:"+sTitle,sValue);}
