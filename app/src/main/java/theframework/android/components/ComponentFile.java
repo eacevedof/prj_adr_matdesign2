@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -232,6 +233,38 @@ public class ComponentFile {
         }
         return false;
     }//write_file
+
+    public String get_content(String sPathDir, String sFileName)
+    {
+        String sReturn = "";
+        String sPathFile = sPathDir +"/"+ sFileName;
+        try {
+            File oFileToRead = new File(sPathFile);
+
+            if(oFileToRead.exists()) {
+                oFileToRead = new File(sPathDir, sFileName);
+                StringBuilder oStringBuild = new StringBuilder();
+
+                FileReader oFileRead = new FileReader(oFileToRead);
+                BufferedReader oBuffRead = new BufferedReader(oFileRead);
+                String sLine;
+
+                while ((sLine = oBuffRead.readLine()) != null) {
+                    oStringBuild.append(sLine);
+                    oStringBuild.append("\n");
+                }
+                oBuffRead.close();
+                sReturn = oStringBuild.toString();
+            }
+            else
+                add_error("get_content.error: pathfile:"+sPathFile+" does not exist");
+        }
+        catch (IOException e) {
+            add_error("get_content.exception: pathdir:"+sPathDir+",filename:"+sFileName);
+        }
+
+        return sReturn;
+    }//get_content
 
     private String read(Context oContext) {
 

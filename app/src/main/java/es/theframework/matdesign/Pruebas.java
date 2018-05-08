@@ -22,6 +22,7 @@ public class Pruebas extends AppCompatActivity {
         setContentView(R.layout.activity_pruebas);
 //        mkdir();
         writefile();
+        show_content();
     }//onCreate
 
     protected void mkdir()
@@ -31,6 +32,15 @@ public class Pruebas extends AppCompatActivity {
         if(!i) log(oCFile.get_errors());
         i = oCFile.mkdir_sdcard("carpeta-externa");
         if(!i) log(oCFile.get_errors());
+    }
+
+    protected void show_content()
+    {
+        ComponentFile oFile = new ComponentFile(this);
+        String sPathSD = Environment.getExternalStorageDirectory().getAbsolutePath().toString();
+        sPathSD = sPathSD.concat("/tfw_logs");
+        //sPathSD = sPathSD.concat("esto-es-un.log");
+        alert(oFile.get_content(sPathSD,"esto-es-un.log"));
     }
 
     protected void writefile()
