@@ -1,5 +1,6 @@
 package es.theframework.matdesign;
 
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.icu.util.Calendar;
 import android.os.Environment;
@@ -23,6 +24,7 @@ public class Pruebas extends AppCompatActivity {
 //        mkdir();
         writefile();
         show_content();
+        info();
     }//onCreate
 
     protected void mkdir()
@@ -32,6 +34,17 @@ public class Pruebas extends AppCompatActivity {
         if(!i) log(oCFile.get_errors());
         i = oCFile.mkdir_sdcard("carpeta-externa");
         if(!i) log(oCFile.get_errors());
+    }
+
+    public void info()
+    {
+        log("Packagename:"+getApplicationContext().getPackageName());
+        ApplicationInfo applicationInfo = getApplicationInfo();
+        int stringId = applicationInfo.labelRes;
+        if(stringId == 0)
+            log("nonlocallizedlabel:"+applicationInfo.nonLocalizedLabel.toString());
+        else
+            log("getString(stringid):"+getString(stringId));
     }
 
     protected void show_content()
