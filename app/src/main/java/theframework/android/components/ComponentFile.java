@@ -53,6 +53,9 @@ public class ComponentFile {
                 {
                     boolean isCreated = oFolder.mkdir();
                     if(!isCreated)
+                        isCreated = oFolder.mkdirs();
+
+                    if(!isCreated)
                         add_error("Folder: " + sFolder + " , not created!");
                     else
                         return true;
@@ -65,6 +68,19 @@ public class ComponentFile {
             add_error("Check sdcard app permission");
         return false;
     }//mkdir_sdcard1
+
+    public boolean is_dir(String sPathDir)
+    {
+        File oFile = new File(sPathDir);
+        return oFile.isDirectory();
+    }
+
+    public boolean is_file(String sPathFile)
+    {
+        File oFile = new File(sPathFile);
+        return oFile.isFile();
+    }
+
 
     //internal storage
     public boolean mkdir_app(String sFolder)
