@@ -1,7 +1,6 @@
 package es.theframework.matdesign;
 
 import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.icu.util.Calendar;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +11,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.util.Date;
 
+import theframework.TheFramework;
 import theframework.android.components.ComponentFile;
 
 //AppCompatActivity: Base class for activities that use the support library action bar features.
@@ -70,7 +70,7 @@ public class Pruebas extends AppCompatActivity {
         String sPathSD = Environment.getExternalStorageDirectory().getAbsolutePath().toString();
         sPathSD = sPathSD.concat("/tfw_logs");
         log("sPathSD:"+sPathSD);
-        boolean isCreated = oFile.write_file(sPathSD,"esto-es-un.log","some text "+currentTime.toString());
+        boolean isCreated = oFile.write_file(sPathSD,"esto-es-un.log","some text "+ TheFramework.get_date());
         log("is_created:"+String.valueOf(isCreated)+",timenow:"+currentTime.toString());
         alert(oFile.get_errors());
         log(oFile.get_errors());
