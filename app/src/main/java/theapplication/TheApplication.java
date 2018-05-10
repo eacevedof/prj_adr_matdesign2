@@ -20,6 +20,7 @@ public class TheApplication {
     {
         this.oContext = oContext;
         this.oFile = new ComponentFile(oContext);
+        arErrors = new ArrayList<String>();
         //sPackageName = oContext.getApplicationContext().getPackageName();
     }
 
@@ -40,7 +41,8 @@ public class TheApplication {
         ComponentFile oFile = new ComponentFile(oContext);
 
         String sPathFolder;
-        Boolean isCreated;
+
+        boolean isCreated = false;
         for (String sFolder : arFolders ){
             sPathFolder = sPackageName+"/"+sFolder;
             if(!oFile.is_dir(sPathFolder)) {
@@ -56,7 +58,7 @@ public class TheApplication {
     {
         String sPackageName = oContext.getApplicationContext().getPackageName();
         ComponentFile oFile = new ComponentFile(oContext);
-        if(oFile.mkdir_sdcard())
+        //if(oFile.mkdir_sdcard())
     }
 
     public void bootstrap()
