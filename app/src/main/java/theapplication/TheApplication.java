@@ -1,6 +1,7 @@
 package theapplication;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -60,8 +61,10 @@ public class TheApplication {
 
     public void bootstrap()
     {
+        log("bootstrap()");
         mkdir_logs();
         mkdir_backup();
+        log("bootstrap END:"+get_errors());
     }
 
     private void add_error(String sMessage){arErrors.add(sMessage);isError=true;}
@@ -71,5 +74,10 @@ public class TheApplication {
     public boolean is_error(){return isError;}
     public String get_errors(){return arErrors.toString();}
     public void clear_errors(){arErrors = new ArrayList<String>();isError=false;}
+
+    protected void log(String sText)
+    {
+        Log.d("[TheApplication]",sText);
+    }
 
 }//TheApplication

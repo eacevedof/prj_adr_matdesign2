@@ -11,6 +11,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.util.Date;
 
+import theapplication.TheApplication;
 import theframework.TheFramework;
 import theframework.android.components.ComponentFile;
 
@@ -22,10 +23,17 @@ public class Pruebas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pruebas);
 //        mkdir();
-        writefile();
-        show_content();
-        info();
+        //writefile();
+        //show_content();
+        //info();
+        bootstrap();
     }//onCreate
+
+    protected void bootstrap()
+    {
+        TheApplication oApp = new TheApplication(this);
+        oApp.bootstrap();
+    }
 
     protected void mkdir()
     {
@@ -61,6 +69,8 @@ public class Pruebas extends AppCompatActivity {
         else
             Log.e("error","ERROR EN oFile.getContent");
     }
+
+
 
     protected void writefile()
     {
