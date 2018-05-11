@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 
 /**
  * ComponentLog 1.0.0
@@ -15,60 +16,47 @@ import java.io.OutputStreamWriter;
 public class ComponentLog {
 
     private String sType;
-    private String sFathFolder;
+    private String sPathDir;
     private String sName;
+    private Context oContext;
 
-    public void ComponentLog(){
+    private ArrayList<String> arWarnings;
+    private ArrayList<String> arErrors;
+    private Boolean isError;
+
+    public void ComponentLog(Context oContext){
         //video28 - 0:31
-        set_type(sType);
-        set_path("/sData/sData/<nombre-paquete>/files");
+        sPathDir = "";
+        //this.sType = sType;
+        isError = false;
+        arErrors = new ArrayList<String>();
+        this.oContext = oContext;
     }//ComponentLog
-
-    private void write(String sData,Context oContext) {
-        try {
-            OutputStreamWriter oStreamOut = new OutputStreamWriter(oContext.openFileOutput("config.txt", Context.MODE_PRIVATE));
-            oStreamOut.write(sData);
-            oStreamOut.close();
-        }
-        catch (IOException e) {
-            Log.e("Exception", "File write failed: " + e.toString());
-        }
-    }//write
     
-    private String readFromFile(Context oContext) {
+    public void ComponentLog(Context oContext,String sPathDir)
+    {
+        isError = false;
+        arErrors = new ArrayList<String>();
+        this.sPathDir = sPathDir;
+        this.oContext = oContext;
+    }//ComponentLog 2
 
-        String sResult = "";
-
-        try {
-            InputStream oInStream = oContext.openFileInput("config.txt");
-
-            if(oInStream != null){
-                InputStreamReader oInStreamR = new InputStreamReader(oInStream);
-                BufferedReader oBuffR = new BufferedReader(oInStreamR);
-                String sLine = "";
-                StringBuilder oStringBuild = new StringBuilder();
-
-                while((sLine = oBuffR.readLine()) != null ){
-                    oStringBuild.append(sLine);
-                }
-
-                oInStream.close();
-                sResult = oStringBuild.toString();
-            }
-        }
-        catch (FileNotFoundException oE) {
-            sResult = "Error: file not found";
-            Log.e("login activity", "File not found: " + oE.toString());
-        } catch (IOException oE) {
-            sResult = "Error: reading";
-            Log.e("login activity", "Can not read file: " + oE.toString());
-        }
-
-        return sResult;
-    }//readFromFile
     
+
     public void set_type(String sValue){this.sType = sValue;}
     public void set_path(String sValue){this.sType = sValue;}
+
+    private void add_error(String sMessage){arErrors.add(sMessage);isError=true;}
+    private void add_error(String sMessage,String sTitle){arErrors.add(sTitle+": "+sMessage);isError=true;}
+    private void set_error(String sMessage){arErrors = new ArrayList<String>(); arErrors.add(sMessage);isError=true;}
+
+    public boolean is_error(){return isError;}
+    public String get_errors(){return arErrors.toString();}
+    public void clear_errors(){arErrors = new ArrayList<String>();isError=false;}
+
+    protected void log(String sValue){Log.d("[ComponentLog]:",sValue);}
+    protected void log(String sValue,String sTitle){Log.d("[ComponentLog]:"+sTitle,sValue);}
+    protected void log(Object oValue,String sTitle){Log.d("[ComponentLog]:"+sTitle,oValue.toString());}
 
 }//ComponentLog
 

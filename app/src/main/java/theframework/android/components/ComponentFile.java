@@ -322,10 +322,8 @@ public class ComponentFile {
     public String get_errors(){return arErrors.toString();}
     public void clear_errors(){arErrors = new ArrayList<String>();isError=false;}
 
-    protected void log(String sValue){Log.d("[**APP**]:",sValue);}
-    protected void log(String sValue,String sTitle){Log.d("[**APP**]:"+sTitle,sValue);}
-    protected void log(Object oValue,String sTitle){Log.d("[**APP**]:"+sTitle,oValue.toString());}
+    protected void log(String sValue){Log.d("[ComonentFile]:",sValue);}
+    protected void log(String sValue,String sTitle){Log.d("[ComponentFile]:"+sTitle,sValue);}
+    protected void log(Object oValue,String sTitle){Log.d("[ComponentFile]:"+sTitle,oValue.toString());}
 
 }//ComponentFile
-
-
