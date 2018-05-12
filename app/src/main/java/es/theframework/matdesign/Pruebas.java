@@ -80,7 +80,7 @@ public class Pruebas extends AppCompatActivity {
         String sPathSD = Environment.getExternalStorageDirectory().getAbsolutePath().toString();
         sPathSD = sPathSD.concat("/tfw_logs");
         log("sPathSD:"+sPathSD);
-        boolean isCreated = oFile.write_file(sPathSD,"esto-es-un.log","some text "+ TheFramework.get_date());
+        boolean isCreated = oFile.write_file(sPathSD,"esto-es-un.log","some text "+ TheFramework.get_date14());
         log("is_created:"+String.valueOf(isCreated)+",timenow:"+currentTime.toString());
         alert(oFile.get_errors());
         log(oFile.get_errors());

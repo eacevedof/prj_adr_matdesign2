@@ -17,12 +17,32 @@ public class TheFramework
         return sDateTime;
     }//get_date(sFormat)
 
-    public static String get_date()
+    public static String get_date14()
     {
         String sFormat = "yyyyMMddHHmmss";
         String sDateTime = get_date(sFormat);
         return sDateTime;
-    }//get_date(sFormat)
+    }//get_date14(sFormat)
 
+    public static String get_date8()
+    {
+        String sFormat = "yyyyMMdd";
+        String sDateTime = get_date(sFormat);
+        return sDateTime;
+    }//get_date8(sFormat)
+
+    public static String get_time()
+    {
+        String sFormat = "HHmmss";
+        String sDateTime = get_date(sFormat);
+        return sDateTime;
+    }//get_time(sFormat)
+
+    public static String get_timeu()
+    {
+        String sFormat = "HH:mm:ss";
+        String sDateTime = get_date(sFormat);
+        return sDateTime;
+    }
 
 }//TheFramework
