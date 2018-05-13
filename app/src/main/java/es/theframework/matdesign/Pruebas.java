@@ -14,6 +14,7 @@ import java.util.Date;
 import theapplication.TheApplication;
 import theframework.TheFramework;
 import theframework.android.components.ComponentFile;
+import theframework.android.components.ComponentLog;
 
 //AppCompatActivity: Base class for activities that use the support library action bar features.
 public class Pruebas extends AppCompatActivity {
@@ -26,8 +27,21 @@ public class Pruebas extends AppCompatActivity {
         //writefile();
         //show_content();
         //info();
-        bootstrap();
+        //bootstrap();
+        logs_test();
     }//onCreate
+
+    protected void logs_test(){
+        log("logs_test()");
+        ComponentLog oLog = new ComponentLog(this);
+        oLog.custom("un valor para custom");
+        oLog.debug("un valor para debug");
+        oLog.emails("un valor para emails");
+        oLog.errors("un valor para errors");
+        oLog.queries("una consulta");
+        oLog.session("valor para session");
+        oLog.shellscripts("valor para shell");
+    }
 
     protected void bootstrap()
     {

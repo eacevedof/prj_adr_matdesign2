@@ -29,7 +29,7 @@ public class ComponentLog {
 
     //public static properties {}
 
-    public void ComponentLog(Context oContext){
+    public ComponentLog(Context oContext){
         //video28 - 0:31
         sPathDir = "";
         //this.sType = sType;
@@ -39,12 +39,13 @@ public class ComponentLog {
         sPublicPath = oContext.getApplicationContext().getPackageName();
     }//ComponentLog
     
-    public void ComponentLog(Context oContext,String sPathDir)
+    public ComponentLog(Context oContext,String sPathDir)
     {
         isError = false;
         arErrors = new ArrayList<String>();
         this.sPathDir = sPathDir;
         this.oContext = oContext;
+        sPublicPath = oContext.getApplicationContext().getPackageName();
     }//ComponentLog 2
 
     public void write(String sValue)
