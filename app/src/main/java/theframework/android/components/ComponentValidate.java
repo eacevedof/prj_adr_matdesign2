@@ -5,7 +5,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-public class ComponentValidator {
+public class ComponentValidate {
 
     private Context oContext;
 
@@ -14,10 +14,10 @@ public class ComponentValidator {
     private Boolean isError;
 
 
-    public ComponentValidator(){
+    public ComponentValidate(){
         arErrors = new ArrayList<String>();
     }
-    public ComponentValidator(Context oContext){
+    public ComponentValidate(Context oContext){
         arErrors = new ArrayList<String>();
         this.oContext = oContext;
     }
@@ -33,7 +33,7 @@ public class ComponentValidator {
     public void clear_errors(){arErrors = new ArrayList<String>();isError=false;}
 
     protected void log(String sValue){
-        Log.d("[ComponentValidator]:",sValue);}
-    protected void log(String sValue,String sTitle){Log.d("[ComponentValidator]:"+sTitle,sValue);}
-    protected void log(Object oValue,String sTitle){Log.d("[ComponentValidator]:"+sTitle,oValue.toString());}    
-}//ComponentValidator
+        Log.d("[ComponentValidate]:",sValue);}
+    protected void log(String sValue,String sTitle){Log.d("[ComponentValidate]:"+sTitle,sValue);}
+    protected void log(Object oValue,String sTitle){Log.d("[ComponentValidate]:"+sTitle,oValue.toString());}    
+}//ComponentValidate
