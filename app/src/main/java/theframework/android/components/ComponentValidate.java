@@ -37,51 +37,66 @@ public class ComponentValidate {
         return  isReturn;
     }
 
-    public boolean is_len(String sValue)
+    public boolean is_len(String sValue,int iLen)
     {
         boolean isReturn = false;
+        if(sValue!=null) isReturn = (sValue.length()==iLen);
         return  isReturn;
     }
 
     public boolean is_lenmin(String sValue,int iMin)
     {
         boolean isReturn = false;
+        if(sValue!=null) isReturn = (sValue.length()>=iMin);
         return  isReturn;
     }
 
     public boolean is_lenmax(String sValue,int iMax)
     {
         boolean isReturn = false;
+        if(sValue!=null) isReturn = (sValue.length()>=iMax);
         return  isReturn;
     }
 
-    public boolean is_string(String sValue)
+    public boolean is_string(Object oValue)
     {
         boolean isReturn = false;
+        if(oValue!=null)
+            isReturn = (oValue instanceof String);
         return  isReturn;
     }
 
     public boolean is_integer(String sValue)
     {
         boolean isReturn = false;
+        if(sValue!=null)
+            isReturn = (sValue.matches("-?\\d+"));
         return  isReturn;
     }
 
     public boolean is_float(String sValue)
     {
         boolean isReturn = false;
+        if(sValue!=null)
+            isReturn = (sValue.matches("\\d*\\.?\\d*"));
         return  isReturn;
     }
 
     public boolean is_float(String sValue,char cDec)
     {
         boolean isReturn = false;
+        if(sValue!=null) {
+            String sPattern = "\\d*"+cDec+"?\\d*";
+            isReturn = (sValue.matches(sPattern));
+        }
         return  isReturn;
     }
 
     public boolean is_pattern(String sPattern,String sValue)
     {
         boolean isReturn = false;
+        if(sValue!=null)
+            isReturn = (sValue.matches(sPattern));
         return  isReturn;
     }
 
@@ -97,7 +112,6 @@ public class ComponentValidate {
         boolean isReturn = false;
         return  isReturn;
     }
-
 
 
     /*
