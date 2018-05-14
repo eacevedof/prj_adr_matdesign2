@@ -22,7 +22,81 @@ public class ComponentValidate {
         this.oContext = oContext;
     }
 
-    
+    public boolean is_date(String sValue){
+        boolean isReturn = false;
+        //eliminar separadores, espacio, -, / :
+        //comprobar que tenga o 14 o 8 de long
+        //que sean numeros
+
+        return isReturn;
+    }
+
+    public boolean is_datetime(String sValue)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_len(String sValue)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_lenmin(String sValue,int iMin)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_lenmax(String sValue,int iMax)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_string(String sValue)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_integer(String sValue)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_float(String sValue)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_float(String sValue,char cDec)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    /*
+    validaciones:
+        tipo
+        long minima
+        long max
+        long fija
+        obligatorio
+        patron x
+        similar
+        contiene
+        coincide may y minus
+        otros:
+            email
+            telefono
+            dni
+            pais
+
+    */
 
     private void add_error(String sMessage){arErrors.add(sMessage);isError=true;}
     private void add_error(String sMessage,String sTitle){arErrors.add(sTitle+": "+sMessage);isError=true;}
