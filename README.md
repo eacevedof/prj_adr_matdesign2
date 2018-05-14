@@ -123,6 +123,9 @@
        parte `Drawable` aparecera como disponible
     6. La propiedad `contentDescription` es obligatoria llenarla. Es una simple descripcion orientativa. No aparecera en ningun sitio.
     7. Ese texto hay que añadirlo al archivo `strings.xml` 
+    
+22. [Curso Android desde cero #22 | Control EditText validación de campos en Android Studio]()
+    1. 
 
 30. [Curso Android desde cero #30 | Base de datos - Altas (SQLite) en Android](https://www.youtube.com/watch?v=TxkdWX3UaNk)
     1. `android.database.sqlite.SQLiteOpenHelper` CLASE para conectar con sqlite

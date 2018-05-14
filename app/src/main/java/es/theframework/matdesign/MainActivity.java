@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity
 
     }//onCreate
 
-
-
     protected void load_fromview()
     {
         butBuscar = (Button)findViewById(R.id.butBuscar);
