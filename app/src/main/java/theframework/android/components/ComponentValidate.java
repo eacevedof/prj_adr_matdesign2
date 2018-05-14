@@ -79,6 +79,27 @@ public class ComponentValidate {
         return  isReturn;
     }
 
+    public boolean is_pattern(String sPattern,String sValue)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_boolean(String sValue)
+    {
+        //trata: yes/no, true,false, 0,1, Y/N, T/F
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+    public boolean is_empty(String sValue)
+    {
+        boolean isReturn = false;
+        return  isReturn;
+    }
+
+
+
     /*
     validaciones:
         tipo
