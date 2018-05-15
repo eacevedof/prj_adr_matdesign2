@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
 
         <!-- https://stackoverflow.com/questions/3631982/change-applications-starting-activity -->
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".Pruebas"
             android:label="Actividad de Pruebas">
@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditTextValidation"></activity>
+        <activity android:name=".EditTextValidation" />
+        <activity android:name=".Index"></activity>
     </application>
 
 </manifest>
