@@ -172,7 +172,9 @@
 33. [Curso Android desde cero #33 | Base de datos – Modificaciones (SQLite) en Android](https://www.youtube.com/watch?v=hq9ASTujqO4)
     1. `public void modificar(View oView){`
     2. `int iCantidad = oDbRW.update("articulos",oContVal,"codigo="+sCodigo,null);`
-       
+
+<hr />
+
 ### Notas
 - Version de la app: API 24: Android 7.0 (Nougat)
 
