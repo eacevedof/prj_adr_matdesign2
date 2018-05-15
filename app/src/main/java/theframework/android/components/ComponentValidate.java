@@ -11,54 +11,76 @@ public class ComponentValidate {
 
     private ArrayList<String> arWarnings;
     private ArrayList<String> arErrors;
-    private Boolean isError;
+    private boolean isError;
 
 
     public ComponentValidate(){
         arErrors = new ArrayList<String>();
+        isError = false;
     }
+
     public ComponentValidate(Context oContext){
         arErrors = new ArrayList<String>();
         this.oContext = oContext;
     }
 
-    public boolean is_date(String sValue){
+    public static boolean is_date(String sValue){
         boolean isReturn = false;
+
+        if(sValue!=null){
+            String sTmp = sValue.replace("/","")
+                    .replace("-","")
+                    .replace(" ","")
+                    .replace(":","");
+            if(ComponentValidate.is_integer(sTmp)) {
+                if (ComponentValidate.is_len(sTmp,8))
+                    isReturn = true;
+            }
+        }
         //eliminar separadores, espacio, -, / :
         //comprobar que tenga o 14 o 8 de long
         //que sean numeros
-
         return isReturn;
     }
 
-    public boolean is_datetime(String sValue)
+    public static boolean is_datetime(String sValue)
     {
         boolean isReturn = false;
+        if(sValue!=null){
+            String sTmp = sValue.replace("/","")
+                    .replace("-","")
+                    .replace(" ","")
+                    .replace(":","");
+            if(ComponentValidate.is_integer(sTmp)) {
+                if (ComponentValidate.is_len(sTmp, 14))
+                    isReturn = true;
+            }
+        }
         return  isReturn;
     }
 
-    public boolean is_len(String sValue,int iLen)
+    public static boolean is_len(String sValue,int iLen)
     {
         boolean isReturn = false;
         if(sValue!=null) isReturn = (sValue.length()==iLen);
         return  isReturn;
     }
 
-    public boolean is_lenmin(String sValue,int iMin)
+    public static boolean is_lenmin(String sValue,int iMin)
     {
         boolean isReturn = false;
         if(sValue!=null) isReturn = (sValue.length()>=iMin);
         return  isReturn;
     }
 
-    public boolean is_lenmax(String sValue,int iMax)
+    public static boolean is_lenmax(String sValue,int iMax)
     {
         boolean isReturn = false;
         if(sValue!=null) isReturn = (sValue.length()>=iMax);
         return  isReturn;
     }
 
-    public boolean is_string(Object oValue)
+    public static boolean is_string(Object oValue)
     {
         boolean isReturn = false;
         if(oValue!=null)
@@ -66,7 +88,7 @@ public class ComponentValidate {
         return  isReturn;
     }
 
-    public boolean is_integer(String sValue)
+    public static boolean is_integer(String sValue)
     {
         boolean isReturn = false;
         if(sValue!=null)
@@ -74,7 +96,7 @@ public class ComponentValidate {
         return  isReturn;
     }
 
-    public boolean is_float(String sValue)
+    public static boolean is_float(String sValue)
     {
         boolean isReturn = false;
         if(sValue!=null)
@@ -82,7 +104,7 @@ public class ComponentValidate {
         return  isReturn;
     }
 
-    public boolean is_float(String sValue,char cDec)
+    public static boolean is_float(String sValue,char cDec)
     {
         boolean isReturn = false;
         if(sValue!=null) {
@@ -92,7 +114,7 @@ public class ComponentValidate {
         return  isReturn;
     }
 
-    public boolean is_pattern(String sPattern,String sValue)
+    public static boolean is_pattern(String sPattern,String sValue)
     {
         boolean isReturn = false;
         if(sValue!=null)
@@ -100,18 +122,31 @@ public class ComponentValidate {
         return  isReturn;
     }
 
-    public boolean is_boolean(String sValue)
+    public static boolean is_boolean(String sValue)
     {
         //trata: yes/no, true,false, 0,1, Y/N, T/F
         boolean isReturn = false;
+        if(sValue!=null)
+        {
+            ArrayList<String> arChars = new ArrayList<String>();
+            arChars.add("y");
+            arChars.add("Y");
+            arChars.add("n");
+            arChars.add("N");
+            arChars.add("0");
+            arChars.add("1");
+        }
         return  isReturn;
     }
 
-    public boolean is_empty(String sValue)
+    public static boolean is_empty(String sValue)
     {
+
         boolean isReturn = false;
         return  isReturn;
     }
+    
+    
 
 
     /*
