@@ -10,8 +10,9 @@
         android:id="@+id/butMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:onClick="go_main"
         android:text="@string/but.text.main"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="21dp"
+        android:onClick="go_pruebas"
         android:text="@string/but.text.pruebas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/butMain" />
@@ -30,9 +32,11 @@
         android:id="@+id/butEditVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
+        android:onClick="go_edittext"
         android:text="@string/but.text.editval"
         app:layout_constraintEnd_toEndOf="@+id/butPruebas"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toEndOf="@+id/butPruebas"
         app:layout_constraintTop_toBottomOf="@+id/butPruebas" />
 </android.support.constraint.ConstraintLayout>
