@@ -10,8 +10,10 @@
         android:id="@+id/butIndex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="87dp"
         android:onClick="go_index"
         android:text="@string/but.text.index"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

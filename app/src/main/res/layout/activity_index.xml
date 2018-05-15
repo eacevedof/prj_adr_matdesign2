@@ -10,23 +10,29 @@
         android:id="@+id/butMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="51dp"
         android:text="@string/but.text.main"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/butPruebas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="21dp"
         android:text="@string/but.text.pruebas"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="120dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butMain" />
 
     <Button
         android:id="@+id/butEditVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="@string/but.text.editval"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="188dp" />
+        app:layout_constraintEnd_toEndOf="@+id/butPruebas"
+        app:layout_constraintStart_toEndOf="@+id/butPruebas"
+        app:layout_constraintTop_toBottomOf="@+id/butPruebas" />
 </android.support.constraint.ConstraintLayout>
