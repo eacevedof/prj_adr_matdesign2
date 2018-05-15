@@ -222,5 +222,5 @@ this.getFilesDir().toString()                           -> /data/user/0/es.thefr
     - Necesito saber como puedo evitar que se llame dos veces a la misma actividad, es decir una vez que
     llamo a una actividad cancelar una posterior llamada si esta esta en proceso de rendereizado.
     - Quizas Intervenga [esto, ciclo de vida](https://pbs.twimg.com/media/DdPGaKjX4AAZsZi.jpg):
-    ![Ciclo de Vida de una Activity](https://pbs.twimg.com/media/DdPGaKjX4AAZsZi.jpg)
+    - [Stackoverflow - Posible solucion](https://stackoverflow.com/questions/8077728/how-to-prevent-the-activity-from-loading-twice-on-pressing-the-button)
     

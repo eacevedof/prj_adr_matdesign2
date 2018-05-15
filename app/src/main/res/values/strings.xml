@@ -22,8 +22,14 @@
     <!--Activity Pruebas-->
     <string name="but.text.index">Go Index</string>
 
-    <!--Activit Index-->
+    <!--Activity Index-->
     <string name="but.text.main">Main</string>
     <string name="but.text.pruebas">Pruebas</string>
     <string name="but.text.editval">EditText Validation</string>
+
+    <!--Activity EditTextValidation-->
+    <string name="but.text.login">Login</string>
+    <string name="edt.hint.nombre">Usuario</string>
+    <string name="edt.hint.password">Contraseña</string>
+
 </resources>
