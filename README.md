@@ -135,12 +135,12 @@
     3. [Creando código de llamada. Metodo: `public void Siguiente(view oView)`](https://youtu.be/VQcJRM6ZgHw?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=464)
     4. Obteniendo el nombre de la clase: [`.class`](https://youtu.be/VQcJRM6ZgHw?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=600)
         1. [Explicación - Stackoverflow](https://stackoverflow.com/questions/15078935/what-does-class-mean-in-java)
-        2. ```java
+        2. 
+        ```java
             .class is used when there isn't an instance of the class available. 
             .getClass() is used when there is an instance of the class available.
             object.getClass() returns the class of the given object        
-        ```      
-
+        ```
 30. [Curso Android desde cero #30 | Base de datos - Altas (SQLite) en Android](https://www.youtube.com/watch?v=TxkdWX3UaNk)
     1. `android.database.sqlite.SQLiteOpenHelper` CLASE para conectar con sqlite
         1. [Heredando de SQLiteOpenHelper](https://youtu.be/TxkdWX3UaNk?t=341)
