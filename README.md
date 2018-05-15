@@ -124,8 +124,10 @@
     6. La propiedad `contentDescription` es obligatoria llenarla. Es una simple descripcion orientativa. No aparecera en ningun sitio.
     7. Ese texto hay que añadirlo al archivo `strings.xml` 
     
-22. [Curso Android desde cero #22 | Control EditText validación de campos en Android Studio]()
-    1. 
+22. [Curso Android desde cero #22 | Control EditText validación de campos en Android Studio](https://www.youtube.com/watch?v=hjd3Kd7FDmc&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&index=22)
+    1. Nuevos campos tipo EditText
+        1. Plain Text = textPersonName
+        2. Password = textPassword 
     
 23. [Curso Android desde cero #23 | Cómo pasar de una Activity a otra - Intent en Android](https://www.youtube.com/watch?v=VQcJRM6ZgHw&index=23&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)
     1. Por cada cambio de pantalla hay que inicializar una nueva activity.
