@@ -11,16 +11,17 @@
         android:theme="@style/AppTheme">
 
         <!-- https://stackoverflow.com/questions/3631982/change-applications-starting-activity -->
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".Pruebas"
+        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".Pruebas"
             android:label="Actividad de Pruebas">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".EditTextValidation"></activity>
     </application>
 
 </manifest>
