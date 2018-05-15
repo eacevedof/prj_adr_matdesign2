@@ -139,8 +139,7 @@
             .class is used when there isn't an instance of the class available. 
             .getClass() is used when there is an instance of the class available.
             object.getClass() returns the class of the given object        
-        ```
-    5.         
+        ```      
 
 30. [Curso Android desde cero #30 | Base de datos - Altas (SQLite) en Android](https://www.youtube.com/watch?v=TxkdWX3UaNk)
     1. `android.database.sqlite.SQLiteOpenHelper` CLASE para conectar con sqlite
@@ -217,3 +216,7 @@ this.getFilesDir().toString()                           -> /data/user/0/es.thefr
 ```
 - [Comprobar permisos sobre la sdcard](https://stackoverflow.com/questions/33162152/storage-permission-error-in-marshmallow)
     - En el dispositivo, settings, la-app, permissions, activar el permiso
+- Error:
+    - Necesito saber como puedo evitar que se llame dos veces a la misma actividad, es decir una vez que
+    llamo a una actividad cancelar una posterior llamada si esta esta en proceso de rendereizado
+    
