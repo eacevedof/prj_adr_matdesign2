@@ -130,8 +130,8 @@
         2. Password = textPassword
     2. Ejemplo
     ```java
-    String sNombre = edtNombre.getText().toString();
-    String sPassword = edtPassword.getText().toString();
+        String sNombre = edtNombre.getText().toString();
+        String sPassword = edtPassword.getText().toString();
     ``` 
     
 23. [Curso Android desde cero #23 | Cómo pasar de una Activity a otra - Intent en Android](https://www.youtube.com/watch?v=VQcJRM6ZgHw&index=23&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)
