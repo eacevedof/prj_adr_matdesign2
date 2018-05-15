@@ -1,11 +1,13 @@
 package es.theframework.matdesign;
 
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.icu.util.Calendar;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.io.File;
@@ -42,6 +44,19 @@ public class Pruebas extends AppCompatActivity {
         oLog.session("valor para session");
         oLog.shellscripts("valor para shell");
     }
+
+    public void go_index(View oView)
+    {
+        //.class
+        /*
+.class is used when there isn't an instance of the class available.
+.getClass() is used when there is an instance of the class available.
+object.getClass() returns the class of the given object
+        */
+        Intent oIntent = new Intent(this,Index.class);
+        startActivity(oIntent);
+    }
+
 
     protected void bootstrap()
     {

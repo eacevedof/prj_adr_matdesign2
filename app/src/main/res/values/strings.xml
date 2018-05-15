@@ -19,4 +19,11 @@
     <string name="but.modificar.text">Modificar</string>
     <string name="but.borrar.text">Borrar</string>
     <string name="title_activity_material_design">MaterialDesign</string>
+    <!--Activity Pruebas-->
+    <string name="but.text.index">Go Index</string>
+
+    <!--Activit Index-->
+    <string name="but.text.main">Main</string>
+    <string name="but.text.pruebas">Pruebas</string>
+    <string name="but.text.editval">EditText Validation</string>
 </resources>

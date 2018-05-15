@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Pruebas">
 
+    <Button
+        android:id="@+id/butIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="go_index"
+        android:text="@string/but.text.index"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="87dp" />
 </android.support.constraint.ConstraintLayout>
