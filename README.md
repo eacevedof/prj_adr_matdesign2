@@ -118,7 +118,7 @@
     1. Son botones a los que se les asocia una imagen. Seria algo como:`<a href=""><img src=""/></a>` 
     2. Es recomendable si se van a personalizar imagenes para botones que cumplan con un tamaño max de 50x50 px
     3. El nombre de las imagenes tiene que estar en minusculas sino puede dar errror
-    4. Para incluir una imagen al proyecto hay que pegarla en la carpeta `app/res/minmap`
+    4. Para incluir una imagen al proyecto hay que pegarla en la carpeta `app/res/minmap` que es una carpeta para iconos
     5. Despues de tener el archivo dentro de `res` cuando añadamos un boton tipo imagen y nos muestre el dialogo de selección en la
        parte `Drawable` aparecera como disponible
     6. La propiedad `contentDescription` es obligatoria llenarla. Es una simple descripcion orientativa. No aparecera en ningun sitio.
