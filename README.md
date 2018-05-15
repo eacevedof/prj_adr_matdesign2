@@ -127,7 +127,7 @@
 22. [Curso Android desde cero #22 | Control EditText validación de campos en Android Studio]()
     1. 
     
-22. [Curso Android desde cero #23 | Cómo pasar de una Activity a otra - Intent en Android](https://www.youtube.com/watch?v=VQcJRM6ZgHw&index=23&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)
+23. [Curso Android desde cero #23 | Cómo pasar de una Activity a otra - Intent en Android](https://www.youtube.com/watch?v=VQcJRM6ZgHw&index=23&list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y)
     1. Por cada cambio de pantalla hay que inicializar una nueva activity.
     2. Con este fin se debe usar un objeto intent: [`Intent oI = new Intent():`](https://youtu.be/VQcJRM6ZgHw?list=PLyvsggKtwbLX06iMtXnRGX5lyjiiMaT2y&t=13)
         1. Parámetros `Intent`: `Intent oI = new Intent(oThisCurrentActivity,ActivityInstanciar.class);`
