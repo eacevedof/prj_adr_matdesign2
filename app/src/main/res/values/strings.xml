@@ -32,4 +32,10 @@
     <string name="edt.hint.nombre">Usuario</string>
     <string name="edt.hint.password">Contraseña</string>
 
+    <!--Activity ActivityRublos-->
+    <string name="but.text.rublos">Calcular</string>
+    <string name="edt.hint.rublos">Rublos</string>
+    <string name="edt.hint.euros">Euros</string>
+    <string name="edt.hint.florines">Florines</string>
+    <string name="title_activity_rublos">Money Exchange</string>
 </resources>

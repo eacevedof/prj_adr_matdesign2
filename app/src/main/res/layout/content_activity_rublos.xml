@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ActivityRublos"
+    tools:showIn="@layout/activity_rublos">
+
+    <EditText
+        android:id="@+id/edtRublos"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="57dp"
+        android:contentDescription="Rublos"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="Rublos"
+        app:layout_constraintBottom_toTopOf="@+id/edtEuros"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtEuros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="27dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="Euros"
+        app:layout_constraintBottom_toTopOf="@+id/edtFlorines"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRublos" />
+
+    <EditText
+        android:id="@+id/edtFlorines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:layout_marginStart="27dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="Florines"
+        app:layout_constraintBottom_toTopOf="@+id/butCalc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEuros" />
+
+    <Button
+        android:id="@+id/butCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="158dp"
+        android:layout_marginEnd="106dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFlorines" />
+</android.support.constraint.ConstraintLayout>

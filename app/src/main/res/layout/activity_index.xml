@@ -4,39 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Index">
+    tools:context=".Index"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/butMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
         android:onClick="go_main"
         android:text="@string/but.text.main"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="94dp" />
 
     <Button
         android:id="@+id/butPruebas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="21dp"
         android:onClick="go_pruebas"
         android:text="@string/but.text.pruebas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butMain" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="168dp" />
 
     <Button
         android:id="@+id/butEditVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:onClick="go_edittext"
         android:text="@string/but.text.editval"
-        app:layout_constraintEnd_toEndOf="@+id/butPruebas"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toEndOf="@+id/butPruebas"
-        app:layout_constraintTop_toBottomOf="@+id/butPruebas" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <Button
+        android:id="@+id/butRublos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="go_rublos"
+        android:text="@string/but.text.editval"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="28dp" />
 </android.support.constraint.ConstraintLayout>

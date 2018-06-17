@@ -22,7 +22,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".EditTextValidation" />
-        <activity android:name=".Index"></activity>
+        <activity android:name=".Index" />
+        <activity
+            android:name=".ActivityRublos"
+            android:label="@string/title_activity_rublos"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -31,4 +31,10 @@ public class Index extends AppCompatActivity {
         startActivity(oIntent);
     }//go_edittext
 
+    public void go_rublos(View oView)
+    {
+        Intent oIntent = new Intent(this,ActivityRublos.class);
+        startActivity(oIntent);
+    }//go_rublos
+
 }//Index
